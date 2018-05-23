@@ -23,6 +23,10 @@ h1, h2, h3, h4, h5, h6, p {
   -ms-flex-align: center;
   align-items: center;
 }
+main {
+  height: 400vh;
+  position: relative;
+}
 section {
   height: 100vh;
 }
@@ -143,4 +147,28 @@ section {
 }
 .image {
   text-align: center;
+}
+.image > div {
+  position: relative;
+  display: inline-block;
+}
+.screen {
+  position: fixed;
+  width: 100%;
+}
+#trigger1 {
+  top: 105vh;
+}
+#trigger2 {
+  top: 205vh;
+}
+#trigger3 {
+  top: 305vh;
+}
+.trigger {
+  height: 1px;
+  width: 50px;
+  left: 0;
+  background: blue;
+  position: absolute;
 }
