@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="78px" height="13px" viewBox="0 0 78 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>stars</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="v1-01" transform="translate(-958.000000, -749.000000)" fill="#FDA738">
+            <g id="item---expanded" transform="translate(728.000000, 238.000000)">
+                <g id="seller" transform="translate(44.000000, 497.000000)">
+                    <g id="stars" transform="translate(186.000000, 14.000000)">
+                        <g id="star" transform="translate(48.000000, 0.000000)">
+                            <polygon id="Star" points="7 10.5 2.88550323 12.663119 3.67130219 8.08155948 0.342604386 4.83688104 4.94275162 4.16844052 7 0 9.05724838 4.16844052 13.6573956 4.83688104 10.3286978 8.08155948 11.1144968 12.663119"></polygon>
+                        </g>
+                        <g id="star" transform="translate(32.000000, 0.000000)">
+                            <polygon id="Star" points="7 10.5 2.88550323 12.663119 3.67130219 8.08155948 0.342604386 4.83688104 4.94275162 4.16844052 7 0 9.05724838 4.16844052 13.6573956 4.83688104 10.3286978 8.08155948 11.1144968 12.663119"></polygon>
+                        </g>
+                        <g id="star">
+                            <polygon id="Star" points="7 10.5 2.88550323 12.663119 3.67130219 8.08155948 0.342604386 4.83688104 4.94275162 4.16844052 7 0 9.05724838 4.16844052 13.6573956 4.83688104 10.3286978 8.08155948 11.1144968 12.663119"></polygon>
+                        </g>
+                        <g id="star" transform="translate(16.000000, 0.000000)">
+                            <polygon id="Star" points="7 10.5 2.88550323 12.663119 3.67130219 8.08155948 0.342604386 4.83688104 4.94275162 4.16844052 7 0 9.05724838 4.16844052 13.6573956 4.83688104 10.3286978 8.08155948 11.1144968 12.663119"></polygon>
+                        </g>
+                        <g id="star" transform="translate(64.000000, 0.000000)">
+                            <polygon id="Star" points="7 10.5 2.88550323 12.663119 3.67130219 8.08155948 0.342604386 4.83688104 4.94275162 4.16844052 7 0 9.05724838 4.16844052 13.6573956 4.83688104 10.3286978 8.08155948 11.1144968 12.663119"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

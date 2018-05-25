@@ -1,3 +1,16 @@
+@keyframes bounceInUp{
+    0%{
+        transform: scale(0.1);
+    }
+    75%{
+        transform: scale(1.2);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+
 $purple: #512DA8;
 $pink: #FF4D88;
 $gray: #323134;
@@ -154,6 +167,11 @@ section {
   }
 }
 
+.text-1 {
+    transition: all 0.3s;
+    transition-delay: 0.5s;
+}
+
 .image {
   text-align: center;
 
@@ -166,6 +184,8 @@ section {
 .screen {
   position: fixed;
   width: 100%;
+  padding-top: 83px;
+  box-sizing: border-box;
 }
 
 #trigger1 {
@@ -186,4 +206,231 @@ section {
   left: 0;
   background: blue;
   position: absolute;
+}
+
+.phone {
+    position: relative;
+}
+
+.thumbnail {
+    position: absolute;
+    text-align: left;
+    transition: all 0.3s;
+
+    > img {
+        display: block;
+    }
+}
+
+.donuts {
+    top: -100px;
+    right: -100px;
+}
+
+.giants {
+    left: -100px;
+    top: 50px;
+}
+
+.sat {
+    bottom: -130px;
+    right: -30px;
+}
+
+.giants-big {
+    left: -100px;
+    top: 50px;
+    opacity: 0;
+    transform: scale(0.5);
+    transform-origin: top left;
+    transition-delay: 0.75s;
+
+    > img {
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+}
+
+.caption {
+    background-color: white;
+    padding: 10px;
+
+    span {
+        display: block;
+
+        &:first-of-type {
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        &:last-of-type {
+            font-size: 20px;
+            font-weight: 600;
+
+            img {
+                width: 12px;
+            }
+        }
+    }
+}
+
+.chat {
+    background-color: white;
+}
+
+.message-container {
+    height: 100px;
+    position: relative;
+}
+
+.message {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    width: 100%;
+    background-color: #64b5f7;
+	border: solid 2px #ffffff;
+    padding: 12px 18px;
+    border-radius: 15px;
+    z-index: 10;
+    height: 66px;
+    box-sizing: border-box;
+    transition: all 0.3s;
+    transition-delay: 1s;
+    transition-origin: bottom left;
+    transform: scale(0.1);
+
+    p {
+        color: white;
+        margin: 0;
+        font-size: 17px;
+    }
+
+    &:after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 8px 7px 0 0;
+        border-color: #64b5f7 transparent transparent transparent;
+        position: absolute;
+        left: 15px;
+        bottom: -8px;
+        z-index: 2;
+    }
+
+    &:before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 12px 10.5px 0 0;
+        border-color: white transparent transparent transparent;
+        position: absolute;
+        left: 13px;
+        bottom: -13px;
+        z-index: 1;
+    }
+}
+
+.message-shadow {
+    background-color: rgba(0, 0, 0, 0.05);
+    position: absolute;
+    width: 100%;
+    top: 5px;
+    left: 30px;
+    border-radius: 15px;
+    z-index: 5;
+    height: 66px;
+    box-sizing: border-box;
+
+    &:before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 12px 10.5px 0 0;
+        border-color: rgba(0, 0, 0, 0.05) transparent transparent transparent;
+        position: absolute;
+        left: 13px;
+        bottom: -12px;
+        z-index: 1;
+    }
+}
+
+.person {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-between;
+
+    > div {
+        display: flex;
+        align-items: center;
+
+        img {
+            margin-right: 10px;
+        }
+
+        > span {
+            font-weight: bold;
+            font-size: 17px;
+        }
+    }
+}
+
+.button {
+    background-color: $purple;
+    width: 300px;
+    padding: 15px;
+    text-align: center;
+    bottom: 70px;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    box-sizing: border-box;
+    border-radius: 12px;
+    opacity: 0;
+    transition: all 0.3s;
+
+    span {
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+    }
+}
+
+// screen 2
+
+.screen-2 {
+
+    .text-1 {
+        margin-top: -30px;
+        opacity: 0;
+    }
+
+    .donuts {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    .sat {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    .giants-big {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .button {
+        opacity: 1;
+    }
+
+    .message {
+        // transform: scale(1);
+        // animation-name: bounceInUp 5s 1;
+        animation: bounceInUp;
+    }
 }

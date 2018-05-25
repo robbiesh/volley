@@ -1,3 +1,31 @@
+@-webkit-keyframes bounceInUp {
+  0% {
+    -webkit-transform: scale(0.1);
+    transform: scale(0.1);
+  }
+  75% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes bounceInUp {
+  0% {
+    -webkit-transform: scale(0.1);
+    transform: scale(0.1);
+  }
+  75% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
 html, body {
   font-family: "proxima-nova";
 }
@@ -145,6 +173,12 @@ section {
   font-weight: 500;
   color: #323134;
 }
+.text-1 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
 .image {
   text-align: center;
 }
@@ -155,6 +189,9 @@ section {
 .screen {
   position: fixed;
   width: 100%;
+  padding-top: 83px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 #trigger1 {
   top: 105vh;
@@ -171,4 +208,217 @@ section {
   left: 0;
   background: blue;
   position: absolute;
+}
+.phone {
+  position: relative;
+}
+.thumbnail {
+  position: absolute;
+  text-align: left;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.thumbnail > img {
+  display: block;
+}
+.donuts {
+  top: -100px;
+  right: -100px;
+}
+.giants {
+  left: -100px;
+  top: 50px;
+}
+.sat {
+  bottom: -130px;
+  right: -30px;
+}
+.giants-big {
+  left: -100px;
+  top: 50px;
+  opacity: 0;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  -webkit-transform-origin: top left;
+  transform-origin: top left;
+  -webkit-transition-delay: 0.75s;
+  transition-delay: 0.75s;
+}
+.giants-big > img {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.caption {
+  background-color: white;
+  padding: 10px;
+}
+.caption span {
+  display: block;
+}
+.caption span:first-of-type {
+  font-weight: bold;
+  font-size: 24px;
+}
+.caption span:last-of-type {
+  font-size: 20px;
+  font-weight: 600;
+}
+.caption span:last-of-type img {
+  width: 12px;
+}
+.chat {
+  background-color: white;
+}
+.message-container {
+  height: 100px;
+  position: relative;
+}
+.message {
+  position: absolute;
+  top: 0;
+  left: 25px;
+  width: 100%;
+  background-color: #64b5f7;
+  border: solid 2px #ffffff;
+  padding: 12px 18px;
+  border-radius: 15px;
+  z-index: 10;
+  height: 66px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transition-delay: 1s;
+  transition-delay: 1s;
+  transition-origin: bottom left;
+  -webkit-transform: scale(0.1);
+  transform: scale(0.1);
+}
+.message p {
+  color: white;
+  margin: 0;
+  font-size: 17px;
+}
+.message:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 7px 0 0;
+  border-color: #64b5f7 transparent transparent transparent;
+  position: absolute;
+  left: 15px;
+  bottom: -8px;
+  z-index: 2;
+}
+.message:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 12px 10.5px 0 0;
+  border-color: white transparent transparent transparent;
+  position: absolute;
+  left: 13px;
+  bottom: -13px;
+  z-index: 1;
+}
+.message-shadow {
+  background-color: rgba(0, 0, 0, 0.05);
+  position: absolute;
+  width: 100%;
+  top: 5px;
+  left: 30px;
+  border-radius: 15px;
+  z-index: 5;
+  height: 66px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.message-shadow:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 12px 10.5px 0 0;
+  border-color: rgba(0, 0, 0, 0.05) transparent transparent transparent;
+  position: absolute;
+  left: 13px;
+  bottom: -12px;
+  z-index: 1;
+}
+.person {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 10px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.person > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.person > div img {
+  margin-right: 10px;
+}
+.person > div > span {
+  font-weight: bold;
+  font-size: 17px;
+}
+.button {
+  background-color: #512DA8;
+  width: 300px;
+  padding: 15px;
+  text-align: center;
+  bottom: 70px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%);
+  position: absolute;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 12px;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.button span {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+.screen-2 .text-1 {
+  margin-top: -30px;
+  opacity: 0;
+}
+.screen-2 .donuts {
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  opacity: 0;
+}
+.screen-2 .sat {
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  opacity: 0;
+}
+.screen-2 .giants-big {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.screen-2 .button {
+  opacity: 1;
+}
+.screen-2 .message {
+  -webkit-animation: bounceInUp;
+  animation: bounceInUp;
 }

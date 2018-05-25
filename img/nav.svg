@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="19px" viewBox="0 0 19 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M7.64631323,11.523677 L1.46471781,9.97827818 C0.705601752,9.78849917 0.6029364,8.75167978 1.31009221,8.41671123 L17.1434255,0.916711233 C17.8510715,0.581510495 18.5884798,1.31891872 18.253279,2.02656472 L10.753279,17.8598981 C10.4183105,18.5670539 9.3814911,18.4643885 9.19171208,17.7052725 L7.64631323,11.523677 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="nav">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Shape" fill="#64B5F7" fill-rule="nonzero" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>
