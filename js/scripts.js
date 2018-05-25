@@ -2,10 +2,22 @@ jQuery(document).ready(function() {
 
     var pos = $(window).scrollTop();
     setScreen(pos);
+
+    // $(".nav-pointer").css("opacity", 1);
+
 });
 
-var trigger1 = $("#trigger1").offset().top - $(window).height();
-var trigger1_hit = false;
+var prev = "";
+var curr = "";
+
+var screen2_top = $("#screen2").offset().top - $(window).height();
+var screen2_bottom = $("#screen2").offset().top;
+
+var screen3_top = $("#screen3").offset().top - $(window).height();
+var screen3_bottom = $("#screen3").offset().top;
+
+var screen4_top = $("#screen4").offset().top - $(window).height();
+var screen4_bottom = $("#screen4").offset().top;
 
 $(window).scroll(function() {
     var pos = $(window).scrollTop();
@@ -14,30 +26,94 @@ $(window).scroll(function() {
 
 function setScreen(pos) {
 
-    if (pos > trigger1) {
+    if (pos == screen2_top) {
 
-       if (!trigger1_hit)  {
-         trigger1_hit = true;
+      if (curr !== "screen-1")  {
+        prev = curr;
+        curr = "screen-1";
 
-         // move to state 2
+        if (prev == "screen-2") {
+          $(".screen").addClass("back");
+        } else {
+          $(".screen").removeClass("back");
+        }
 
-         to2from1();
+        // var menu_item = $(".nav--screen-1");
+        // var nav_pointer = $(".nav-pointer");
 
-         console.log('we hit trigger1');
-       }
+        // var pointer_pos = Math.abs(menu_item.outerWidth() - nav_pointer.outerWidth());
 
-    } else {
+        // console.log(menu_item.width());
+        // console.log(nav_pointer.width());
 
-      if (trigger1_hit)  {
-        trigger1_hit = false;
+        // var l = menu_item.position().left;
 
-        // return to state 1
+        // $(".nav-pointer").css("left", pointer_pos);
 
-        to1from2();
-
-        console.log('reset it');
+        $(".screen").addClass(curr);
+        $(".screen").removeClass("screen-2 screen-3 screen-4");
       }
 
+    }
+
+    else if (pos > screen2_top && pos < screen2_bottom) {
+
+       if (curr !== "screen-2")  {
+         prev = curr;
+         curr = "screen-2";
+
+         if (prev == "screen-3") {
+           $(".screen").addClass("back");
+         } else {
+           $(".screen").removeClass("back");
+         }
+
+         var menu_item = $(".nav--screen-2");
+
+         $(".nav-pointer").css("left", menu_item.position().left - (menu_item.width()/2));
+
+         $(".screen").addClass(curr);
+         $(".screen").removeClass("screen-1 screen-3 screen-4");
+       }
+
+    }
+
+    else if (pos > screen3_top && pos < screen3_bottom) {
+
+      if (curr != "screen-3")  {
+
+        prev = curr;
+        curr = "screen-3";
+
+        if (prev == "screen-4") {
+          $(".screen").addClass("back");
+        } else {
+          $(".screen").removeClass("back");
+        }
+
+        var menu_item = $(".nav--screen-3");
+
+        $(".nav-pointer").css("left", menu_item.position().left - (menu_item.width()/2));
+
+        $(".screen").addClass(curr);
+        $(".screen").removeClass("screen-1 screen-2 screen-4");
+
+      }
+    }
+
+    else if (pos > screen4_top && pos < screen4_bottom) {
+
+      if (curr != "screen-4")  {
+
+        prev = curr;
+        curr = "screen-4";
+
+        $(".nav-pointer").css("left", $(".nav--screen-3").offset().left - 30);
+
+        $(".screen").addClass(curr);
+        $(".screen").removeClass("screen-1 screen-2 screen-3");
+
+      }
     }
 
 }
@@ -45,9 +121,23 @@ function setScreen(pos) {
 function to2from1() {
     $(".screen").removeClass("screen-1");
     $(".screen").addClass("screen-2");
+
+    $(".screen").removeClass("back");
 }
 
 function to1from2() {
     $(".screen").removeClass("screen-2");
     $(".screen").addClass("screen-1");
+
+    $(".screen").addClass("back");
+}
+
+function to3from2() {
+    $(".screen").removeClass("screen-2");
+    $(".screen").addClass("screen-3");
+}
+
+function to2from3() {
+  $(".screen").removeClass("screen-3");
+  $(".screen").addClass("screen-2");
 }

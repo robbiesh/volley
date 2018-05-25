@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="css/normalize.css?v=1.0">
   <link rel="stylesheet" href="css/grid.css?v=1.0">
   <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <link rel="stylesheet" href="css/screens.css?v=1.0">
+  <link rel="stylesheet" href="css/anims.css?v=1.0">
 
   <link rel="stylesheet" href="https://use.typekit.net/son8jif.css">
 
@@ -48,11 +50,17 @@
     </div>
 
     <div class="menu">
-      <ul>
-        <li><a href="">Find</a></li>
-        <li><a href="">Stuff</a></li>
-        <li><a href="">Nearby</a></li>
-      </ul>
+
+      <div>
+        <ul>
+          <li class="nav--screen-1"><a href="">Find</a></li>
+          <li class="nav--screen-2"><a href="">Stuff</a></li>
+          <li class="nav--screen-3"><a href="">Nearby</a></li>
+        </ul>
+
+        <div class="nav-pointer">
+        </div>
+      </div>
     </div>
 
     <div class="account">
@@ -71,13 +79,23 @@
 
   <main>
 
-    <section class="screen screen-1">
+    <section class="screen screen-1" data-from="0">
 
-      <div class="container container--flex container--centered">
+      <div class="container">
         <div class="text">
-            <div class="text-1">
+            <div class="text-inner text-1">
               <h2>Volley lets you find stuff nearby</h2>
+              <p>See offers just around the corner</p>
+            </div>
+
+            <div class="text-inner text-2">
+              <h2>Get the things you want</h2>
               <p>Like free coffee, last minute tickets, textbooks, and more.</p>
+            </div>
+
+            <div class="text-inner text-3">
+              <h2>Volley is wherever you are</h2>
+              <p>We only connect you with other verified users near you.</p>
             </div>
         </div>
 
@@ -137,10 +155,88 @@
                 </div>
             </div>
 
+            <div class="thumbnail nico">
+              <img src="img/nico.png" />
+
+              <div class="caption caption-nico">
+                  <span>Nico E.</span>
+                  <span>San Francisco, CA</span>
+                  <img src="img/stars.svg" />
+                  <div class="facebook">
+                    <div class="facebook-button">
+                      <div>
+                        <?xml version="1.0" encoding="UTF-8"?>
+                        <svg width="12px" height="9px" viewBox="0 0 12 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="facebook" transform="translate(-24.000000, -26.000000)" fill="#D8D8D8" stroke="#4266B2" stroke-width="2">
+                                    <g id="facebook-verified">
+                                        <polyline id="Path" points="25.307455 30.0092136 28.5117284 33.213487 34.7252154 27"></polyline>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                      </div>
+                      <span>Facebook Verified</span>
+                    </div>
+                  </div>
+              </div>
+            </div>
+
             <img src="img/phone.png" alt="" />
 
             <div class="button">
                 <span>Bid for this item</span>
+            </div>
+
+            <div class="dotted-circle">
+              <svg width="474px" height="481px" viewBox="0 0 474 481" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+                  <desc>Created with Sketch.</desc>
+                  <defs>
+                      <polygon id="path-1" points="237 -2.66453526e-15 1.77635684e-15 3.73867604e-14 8.35442826e-15 481 474 481 474 240.5 237 240.5"></polygon>
+                      <path d="M237,481 C367.891486,481 474,373.324482 474,240.5 C474,107.675518 367.891486,0 237,0 C106.108514,0 0,107.675518 0,240.5 C0,373.324482 106.108514,481 237,481 Z" id="path-3"></path>
+                      <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="474" height="481" fill="white">
+                          <use xlink:href="#path-3"></use>
+                      </mask>
+                  </defs>
+                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g id="v1-02" transform="translate(-915.000000, -126.000000)">
+                          <g id="background" transform="translate(527.000000, 126.000000)">
+                              <g id="hud/marker/green-copy-2" transform="translate(388.000000, 0.000000)">
+                                  <mask id="mask-2" fill="white">
+                                      <use xlink:href="#path-1"></use>
+                                  </mask>
+                                  <g id="Rectangle-3"></g>
+                                  <g id="Oval-Copy-2" stroke-dasharray="6,15" mask="url(#mask-2)" stroke="#64B5F7" stroke-width="4">
+                                      <use mask="url(#mask-4)" xlink:href="#path-3"></use>
+                                  </g>
+                              </g>
+                          </g>
+                      </g>
+                  </g>
+              </svg>
+            </div>
+
+            <div class="green-circle">
+              <?xml version="1.0" encoding="UTF-8"?>
+              <svg width="416px" height="416px" viewBox="0 0 356 416" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <defs>
+                      <polygon id="path-1" points="208 -2.66453526e-15 1.77635684e-15 3.19744231e-14 7.54951657e-15 416 416 416 208 208"></polygon>
+                  </defs>
+                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g id="v1-02" transform="translate(-374.000000, -563.000000)">
+                          <g id="background" transform="translate(314.000000, 126.000000)">
+                              <g id="hud/marker/green-copy-3" transform="translate(208.000000, 645.000000) rotate(-180.000000) translate(-208.000000, -645.000000) translate(0.000000, 437.000000)">
+                                  <mask id="mask-2" fill="white">
+                                      <use xlink:href="#path-1"></use>
+                                  </mask>
+                                  <g id="Rectangle-3"></g>
+                                  <circle id="Oval-Copy-2" stroke="#00DCC7" stroke-width="2" mask="url(#mask-2)" cx="208" cy="208" r="207"></circle>
+                              </g>
+                          </g>
+                      </g>
+                  </g>
+              </svg>
             </div>
 
           </div>
@@ -150,17 +246,128 @@
 
     </section>
 
-    <div id="trigger1" class="trigger">
+    <section class="footer">
+
+        <div class="footer-inner">
+          <h1>Try it out now</h1>
+          <div class="footer-cta">
+            <div class="download">
+
+              <div class="apple">
+                <svg width="23px" height="27px" viewBox="0 0 23 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+                    <desc>Created with Sketch.</desc>
+                    <defs></defs>
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="v1-03" transform="translate(-587.000000, -704.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                            <g id="Group-4" transform="translate(0.000000, 317.000000)">
+                                <g id="Group-15">
+                                    <path d="M609.517954,408.041197 C609.105012,408.984502 608.616225,409.852809 608.049905,410.651119 C607.277957,411.739419 606.645904,412.49273 606.158801,412.91105 C605.403708,413.597696 604.59468,413.949352 603.728345,413.969352 C603.106405,413.969352 602.356368,413.794357 601.483292,413.439368 C600.60735,413.086045 599.802367,412.91105 599.06632,412.91105 C598.294372,412.91105 597.466466,413.086045 596.580917,413.439368 C595.69402,413.794357 594.979547,413.979351 594.433284,413.997684 C593.602514,414.032683 592.774439,413.671027 591.947882,412.91105 C591.420328,412.456064 590.760465,411.676088 589.969977,410.571121 C589.121845,409.391157 588.424564,408.022865 587.878301,406.462912 C587.293273,404.777963 587,403.146345 587,401.566726 C587,399.757281 587.395413,398.196662 588.187418,396.888868 C588.809864,395.8384 589.637938,395.009758 590.674337,394.401443 C591.710736,393.793128 592.830566,393.483137 594.036524,393.463305 C594.696387,393.463305 595.56171,393.665132 596.637044,394.061787 C597.709343,394.459775 598.39786,394.661602 598.699729,394.661602 C598.925414,394.661602 599.690283,394.425609 600.986919,393.955123 C602.213103,393.518803 603.247985,393.338142 604.095779,393.409306 C606.393082,393.592634 608.119009,394.488107 609.266818,396.101392 C607.212223,397.332354 606.195882,399.056469 606.216107,401.268235 C606.234648,402.991017 606.866701,404.42464 608.108896,405.562939 C608.671845,406.091256 609.300528,406.499577 610,406.789569 C609.848307,407.224555 609.688187,407.641209 609.517954,408.041197 Z M604.249157,387.54015 C604.249157,388.89046 603.750256,390.151238 602.755826,391.318203 C601.555767,392.705494 600.104236,393.507137 598.53017,393.38064 C598.510113,393.218645 598.498483,393.048151 598.498483,392.868989 C598.498483,391.572695 599.069185,390.185404 600.082662,389.051105 C600.588641,388.476789 601.232156,387.999253 602.012531,387.618315 C602.791221,387.243059 603.527774,387.035532 604.220504,387 C604.24073,387.180511 604.249157,387.361039 604.249157,387.540134 L604.249157,387.54015 Z" id="Shape"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+              </div>
+
+              <a href="">
+                <span>Download Volley</span>
+                <span>Free on the App Store</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="site-footer">
+          <div class="site-footer-nav">
+            <ul>
+              <li><a href="">Privacy Policy</a></li>
+              <li><a href="">Terms of Service</a></li>
+            </ul>
+          </div>
+
+          <div class="site-footer-name">
+            <span>&copy; 2018 Manifold Technology</span>
+          </div>
+        </div>
+
+        <div class="white-dotted-circle">
+          <?xml version="1.0" encoding="UTF-8"?>
+          <svg width="474px" height="399px" viewBox="0 0 474 399" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <defs>
+                  <polygon id="path-1" points="237 -2.66453526e-15 1.77635684e-15 3.73867604e-14 8.35442826e-15 481 474 481 474 240.5 237 240.5"></polygon>
+                  <path d="M237,481 C367.891486,481 474,373.324482 474,240.5 C474,107.675518 367.891486,0 237,0 C106.108514,0 0,107.675518 0,240.5 C0,373.324482 106.108514,481 237,481 Z" id="path-3"></path>
+                  <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="474" height="481" fill="white">
+                      <use xlink:href="#path-3"></use>
+                  </mask>
+              </defs>
+              <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g id="v1-03" transform="translate(-273.000000, -625.000000)">
+                      <g id="Group-4" transform="translate(0.000000, 317.000000)">
+                          <g id="Group-15">
+                              <g id="circle/white" transform="translate(273.000000, 308.000000)">
+                                  <g id="circle/blue-copy-9">
+                                      <mask id="mask-2" fill="white">
+                                          <use xlink:href="#path-1"></use>
+                                      </mask>
+                                      <g id="Rectangle-3"></g>
+                                      <g id="Oval-Copy-2" stroke-dasharray="7,15" mask="url(#mask-2)" stroke="#FFFFFF" stroke-width="4">
+                                          <use mask="url(#mask-4)" xlink:href="#path-3"></use>
+                                      </g>
+                                  </g>
+                              </g>
+                          </g>
+                      </g>
+                  </g>
+              </g>
+          </svg>
+        </div>
+
+        <div class="white-circle">
+          <?xml version="1.0" encoding="UTF-8"?>
+          <svg width="241px" height="385px" viewBox="0 0 241 385" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <defs>
+                  <polygon id="path-1" points="237 -2.66453526e-15 1.77635684e-15 3.73867604e-14 8.35442826e-15 481 474 481 474 240.5 237 240.5"></polygon>
+                  <path d="M237,481 C367.891486,481 474,373.324482 474,240.5 C474,107.675518 367.891486,0 237,0 C106.108514,0 0,107.675518 0,240.5 C0,373.324482 106.108514,481 237,481 Z" id="path-3"></path>
+                  <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="474" height="481" fill="white">
+                      <use xlink:href="#path-3"></use>
+                  </mask>
+              </defs>
+              <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g id="v1-03" transform="translate(-1122.000000, -317.000000)">
+                      <g id="Group-4" transform="translate(0.000000, 317.000000)">
+                          <g id="Group-15">
+                              <g id="circle/white-copy" transform="translate(1362.500000, 148.000000) rotate(-90.000000) translate(-1362.500000, -148.000000) translate(1125.500000, -92.500000)">
+                                  <g id="circle/blue-copy-9" transform="translate(237.000000, 240.500000) rotate(-180.000000) translate(-237.000000, -240.500000) ">
+                                      <mask id="mask-2" fill="white">
+                                          <use xlink:href="#path-1"></use>
+                                      </mask>
+                                      <g id="Rectangle-3"></g>
+                                      <g id="Oval-Copy-2" stroke-dasharray="1" mask="url(#mask-2)" stroke="#FFFFFF" stroke-width="4">
+                                          <use mask="url(#mask-4)" xlink:href="#path-3"></use>
+                                      </g>
+                                  </g>
+                              </g>
+                          </g>
+                      </g>
+                  </g>
+              </g>
+          </svg>
+        </div>
+
+    </section>
+
+    <div id="screen2" class="trigger">
     </div>
 
-    <div id="trigger2" class="trigger">
+    <div id="screen3" class="trigger">
     </div>
 
-    <div id="trigger3" class="trigger">
+    <div id="screen4" class="trigger">
     </div>
 
-    <div id="trigger4" class="trigger">
-    </div>
+    <!-- <div id="screen5" class="trigger">
+    </div> -->
 
   </main>
 

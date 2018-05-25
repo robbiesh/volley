@@ -1,15 +1,31 @@
-@keyframes bounceInUp{
+@keyframes bounceInUp {
     0%{
-        transform: scale(0.1);
+        transform: scale(1);
     }
-    75%{
-        transform: scale(1.2);
+    50%{
+        transform: scale(1.1);
     }
     to{
         transform: scale(1);
     }
 }
 
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
 
 $purple: #512DA8;
 $pink: #FF4D88;
@@ -31,6 +47,8 @@ h1, h2, h3, h4, h5, h6, p {
   padding: 0 30px;
   max-width: 100%;
   box-sizing: border-box;
+  position: relative;
+  height: 100vh;
 }
 
 .container--flex {
@@ -61,9 +79,17 @@ section {
   width: 100%;
   left: 0;
   right: 0;
+  z-index: 100;
 
   > div {
     flex: 1;
+  }
+}
+
+.back {
+  .donuts, .giants, .sat, .text-1, .text-2, .text-3, .nico, .giants-big, .message, .button {
+    transition-delay: 0s !important;
+    animation-delay: 0s !important;
   }
 }
 
@@ -76,6 +102,13 @@ section {
 }
 
 .menu {
+  position: relative;
+  text-align: center;
+
+  > div {
+    display: inline-block;
+  }
+
   ul {
     list-style-type: none;
     display: flex;
@@ -83,17 +116,41 @@ section {
     padding: 0;
     justify-content: center;
     height: 100%;
+    z-index: 10;
+    position: relative;
   }
 
   li {
     padding: 30px 50px;
     text-transform: uppercase;
     font-size: 18px;
+
   }
 
   a {
     color: white;
     text-decoration: none;
+  }
+
+  .nav-pointer {
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+
+    &:before {
+      top: 0;
+    	border: solid transparent;
+    	content: " ";
+    	height: 0;
+    	width: 0;
+    	position: absolute;
+    	pointer-events: none;
+    	border-color: rgba(255, 255, 255, 0);
+    	border-top-color: $pink;
+    	border-width: 100px;
+    	// margin-left: -100px;
+    }
   }
 }
 
@@ -150,9 +207,15 @@ section {
 
 .text, .image {
   width: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .text {
+  left: 0;
+  height: 50px;
+
   h2 {
     font-weight: 900;
     font-size: 60px;
@@ -167,13 +230,29 @@ section {
   }
 }
 
+.text-inner {
+  transition: all 0.3s;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+}
+
 .text-1 {
-    transition: all 0.3s;
-    transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+
+.text-2 {
+  margin-top: 30px;
+}
+
+.text-3 {
+  margin-top: 30px;
 }
 
 .image {
   text-align: center;
+  right: 0;
 
   > div {
     position: relative;
@@ -184,20 +263,20 @@ section {
 .screen {
   position: fixed;
   width: 100%;
-  padding-top: 83px;
+  // padding-top: 83px;
   box-sizing: border-box;
 }
 
-#trigger1 {
-  top: 105vh;
+#screen2 {
+  top: 100vh;
 }
 
-#trigger2 {
-  top: 205vh;
+#screen3 {
+  top: 200vh;
 }
 
-#trigger3 {
-  top: 305vh;
+#screen4 {
+  top: 300vh;
 }
 
 .trigger {
@@ -225,16 +304,22 @@ section {
 .donuts {
     top: -100px;
     right: -100px;
+    opacity: 0;
+    transition: all 0.3s;
 }
 
 .giants {
     left: -100px;
     top: 50px;
+    transition: all 0.3s;
+    opacity: 0;
 }
 
 .sat {
     bottom: -130px;
     right: -30px;
+    transition: all 0.3s;
+    opacity: 0;
 }
 
 .giants-big {
@@ -244,16 +329,36 @@ section {
     transform: scale(0.5);
     transform-origin: top left;
     transition-delay: 0.75s;
+    transition: all 0.3s;
 
     > img {
         border-top-right-radius: 10px;
         border-top-left-radius: 10px;
+        max-width: 400px;
     }
+}
+
+.nico {
+  left: -100px;
+  top: 50px;
+  opacity: 0;
+  transition: all 0.3s;
+  transform: scale(0.1, 1);
+  // transform: scale(0.5);
+  // transform-origin: top left;
+  // transition-delay: 0.75s;
+
+  > img {
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      max-width: 400px;
+  }
 }
 
 .caption {
     background-color: white;
     padding: 10px;
+    color: #323134;
 
     span {
         display: block;
@@ -274,6 +379,22 @@ section {
     }
 }
 
+.caption-nico {
+  text-align: center;
+  padding: 20px;
+
+  > span {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  > img {
+    padding: 10px;
+    display: block;
+    margin: 0 auto 5px;
+  }
+}
+
 .chat {
     background-color: white;
 }
@@ -289,7 +410,7 @@ section {
     left: 25px;
     width: 100%;
     background-color: #64b5f7;
-	border: solid 2px #ffffff;
+	  border: solid 2px #ffffff;
     padding: 12px 18px;
     border-radius: 15px;
     z-index: 10;
@@ -298,7 +419,8 @@ section {
     transition: all 0.3s;
     transition-delay: 1s;
     transition-origin: bottom left;
-    transform: scale(0.1);
+    transform: scale(0.5);
+    opacity: 0;
 
     p {
         color: white;
@@ -400,37 +522,181 @@ section {
     }
 }
 
-// screen 2
+.facebook-button {
+  background-color: #4266B2;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 15px;
+  border-radius: 12px;
+  position: relative;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  right: -9999px;
+  transition: all 0.3s;
 
-.screen-2 {
+  > div {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    background: white;
+    border-radius: 50%;
+    width: 21px;
+    height: 21px;
+  }
+}
 
-    .text-1 {
-        margin-top: -30px;
-        opacity: 0;
+.facebook {
+  height: 60px;
+  width: 100%;
+  position: relative;
+}
+
+.green-circle {
+  position: absolute;
+  z-index: -10;
+  bottom: -200px;
+  left: -200px;
+
+  > svg {
+    display: block;
+    transition: all 0.3s;
+    // animation: rotating 12s linear infinite;
+  }
+}
+
+.dotted-circle {
+  position: absolute;
+  z-index: -10;
+  top: -150px;
+  right: -250px;
+
+  > svg {
+    display: block;
+    transition: all 0.3s;
+    // animation: rotating 12s linear infinite;
+  }
+}
+
+
+.footer {
+  height: 100vh;
+  background-color: $purple;
+  position: absolute;
+  z-index: 100;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  &:before {
+    top: 0;
+  	left: 50%;
+  	border: solid transparent;
+  	content: " ";
+  	height: 0;
+  	width: 0;
+  	position: absolute;
+  	pointer-events: none;
+  	border-color: rgba(255, 255, 255, 0);
+  	border-top-color: #ffffff;
+  	border-width: 100px;
+  	margin-left: -100px;
+  }
+}
+
+.footer-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .download {
+    width: 300px;
+    margin: auto;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    padding-left: 30px;
+    position: relative;
+
+    span {
+      display: block;
+
+      &:first-of-type {
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 1.25em;
+        margin-bottom: 5px;
+      }
+
+      &:last-of-type {
+        font-size: 11px;
+        font-weight: 500;
+      }
     }
 
-    .donuts {
-        transform: scale(0.5);
-        opacity: 0;
+    .apple {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 23px;
+      z-index: 10;
     }
+  }
 
-    .sat {
-        transform: scale(0.5);
-        opacity: 0;
-    }
+  h1 {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: white;
+  }
+}
 
-    .giants-big {
-        opacity: 1;
-        transform: scale(1);
-    }
+.white-circle {
+  position: absolute;
+  top: 0;
+  right: 50px;
+}
 
-    .button {
-        opacity: 1;
-    }
+.white-dotted-circle {
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+}
 
-    .message {
-        // transform: scale(1);
-        // animation-name: bounceInUp 5s 1;
-        animation: bounceInUp;
-    }
+.site-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  font-size: 12px;
+  box-sizing: border-box;
+  font-weight: 400;
+
+  a, span {
+    color: white;
+  }
+}
+
+.site-footer-nav {
+  ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    padding: 0 30px;
+  }
 }
