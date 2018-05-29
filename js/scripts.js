@@ -49,17 +49,7 @@ function setScreen(pos) {
           $(".screen").removeClass("back");
         }
 
-        // var menu_item = $(".nav--screen-1");
-        // var nav_pointer = $(".nav-pointer");
-
-        // var pointer_pos = Math.abs(menu_item.outerWidth() - nav_pointer.outerWidth());
-
-        // console.log(menu_item.width());
-        // console.log(nav_pointer.width());
-
-        // var l = menu_item.position().left;
-
-        // $(".nav-pointer").css("left", pointer_pos);
+        $(".nav-pointer").css("left", $(".nav--screen-1").position().left - 25);
 
         $(".screen").addClass(curr);
         $(".screen").removeClass("screen-2 screen-3 screen-4");
@@ -79,9 +69,7 @@ function setScreen(pos) {
            $(".screen").removeClass("back");
          }
 
-         var menu_item = $(".nav--screen-2");
-
-         $(".nav-pointer").css("left", menu_item.position().left - (menu_item.width()/2));
+         $(".nav-pointer").css("left", $(".nav--screen-2").position().left - 25);
 
          $(".screen").addClass(curr);
          $(".screen").removeClass("screen-1 screen-3 screen-4");
@@ -102,9 +90,7 @@ function setScreen(pos) {
           $(".screen").removeClass("back");
         }
 
-        var menu_item = $(".nav--screen-3");
-
-        $(".nav-pointer").css("left", menu_item.position().left - (menu_item.width()/2));
+        $(".nav-pointer").css("left", $(".nav--screen-3").position().left - 25);
 
         $(".screen").addClass(curr);
         $(".screen").removeClass("screen-1 screen-2 screen-4");
