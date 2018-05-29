@@ -389,6 +389,7 @@ section {
     position: absolute;
     text-align: left;
     transition: all 0.3s;
+    border-radius: 10px;
 
     > img {
         display: block;
@@ -497,6 +498,8 @@ section {
     padding: 15px;
     color: #323134;
     box-sizing: border-box;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 
     span {
         display: block;
@@ -563,7 +566,7 @@ section {
     background-color: #64b5f7;
 	  border: solid 2px #ffffff;
     padding: 12px 18px;
-    border-radius: 15px;
+    border-radius: 10px;
     z-index: 10;
     height: 66px;
     box-sizing: border-box;
@@ -612,7 +615,7 @@ section {
     width: 100%;
     top: 5px;
     left: 30px;
-    border-radius: 15px;
+    border-radius: 10px;
     z-index: 5;
     height: 66px;
     box-sizing: border-box;
@@ -662,7 +665,7 @@ section {
     transform: translate(-50%);
     position: absolute;
     box-sizing: border-box;
-    border-radius: 12px;
+    border-radius: 10px;
     opacity: 0;
     transition: all 0.3s;
 
@@ -679,7 +682,7 @@ section {
   font-weight: bold;
   font-size: 18px;
   padding: 15px;
-  border-radius: 12px;
+  border-radius: 10px;
   position: relative;
   position: absolute;
   top: 50%;
@@ -789,7 +792,7 @@ section {
     justify-content: center;
     padding: 20px;
     box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.05);
-    border-radius: 6px;
+    border-radius: 10px;
     padding-left: 30px;
     position: relative;
 
@@ -885,7 +888,7 @@ section {
   left: -28px;
   z-index: 100;
 
-  svg {
+  > svg {
     width: 55px;
     transition: all 0.3s;
 
@@ -920,7 +923,7 @@ section {
   height: 3px;
   width: 100%;
   background: white;
-  border-radius: 9px;
+  border-radius: 10px;
   opacity: 1;
   left: 0;
   -webkit-transform: rotate(0deg);
