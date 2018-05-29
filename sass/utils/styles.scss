@@ -418,7 +418,7 @@ section {
 
 .giants {
     left: -100px;
-    top: 50px;
+    top: 20px;
     transition: all 0.3s;
     opacity: 0;
 
@@ -442,7 +442,7 @@ section {
 
 .giants-big {
     left: -100px;
-    top: 50px;
+    top: 20px;
     opacity: 0;
     transform: scale(0.5);
     transform-origin: top left;
@@ -452,7 +452,7 @@ section {
     > img {
         border-top-right-radius: 10px;
         border-top-left-radius: 10px;
-        max-width: 400px;
+        max-width: 300px;
     }
 
     @include media-query($medium-down) {
@@ -654,10 +654,10 @@ section {
 
 .button {
     background-color: $purple;
-    width: 300px;
+    width: 200px;
     padding: 15px;
     text-align: center;
-    bottom: 70px;
+    bottom: 55px;
     left: 50%;
     transform: translate(-50%);
     position: absolute;

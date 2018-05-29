@@ -2631,7 +2631,7 @@ section {
 }
 .giants {
   left: -100px;
-  top: 50px;
+  top: 20px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   opacity: 0;
@@ -2657,7 +2657,7 @@ section {
 }
 .giants-big {
   left: -100px;
-  top: 50px;
+  top: 20px;
   opacity: 0;
   -webkit-transform: scale(0.5);
   transform: scale(0.5);
@@ -2671,7 +2671,7 @@ section {
 .giants-big > img {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-  max-width: 400px;
+  max-width: 300px;
 }
 @media only screen and (max-width: 767px) {
   .giants-big {
@@ -2869,10 +2869,10 @@ section {
 }
 .button {
   background-color: #512DA8;
-  width: 300px;
+  width: 200px;
   padding: 15px;
   text-align: center;
-  bottom: 70px;
+  bottom: 55px;
   left: 50%;
   -webkit-transform: translate(-50%);
   transform: translate(-50%);
@@ -3221,8 +3221,8 @@ section {
 }
 .screen-2 .button {
   opacity: 1;
-  -webkit-transition-delay: 1.25s;
-  transition-delay: 1.25s;
+  -webkit-transition-delay: 1.75s;
+  transition-delay: 1.75s;
 }
 .screen-2 .message {
   -webkit-animation-name: bounceInUp;
