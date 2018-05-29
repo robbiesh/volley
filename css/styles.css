@@ -2272,7 +2272,7 @@ img {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
 }
 @media only screen and (max-width: 1199px) {
   .container {
@@ -2694,7 +2694,7 @@ section {
 .nico > img {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-  max-width: 400px;
+  max-width: 300px;
 }
 @media only screen and (max-width: 767px) {
   .nico > img {
@@ -2705,7 +2705,7 @@ section {
   .nico {
     left: 0;
     top: -120px;
-    max-width: 300px;
+    max-width: 200px;
   }
 }
 .caption {

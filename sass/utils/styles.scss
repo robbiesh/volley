@@ -52,7 +52,7 @@ img {
   max-width: 100%;
   box-sizing: border-box;
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
 
   @include media-query($large-down) {
     padding-top: 120px;
@@ -478,7 +478,7 @@ section {
   > img {
       border-top-right-radius: 10px;
       border-top-left-radius: 10px;
-      max-width: 400px;
+      max-width: 300px;
 
       @include media-query($medium-down) {
         max-width: 100%;
@@ -488,7 +488,7 @@ section {
   @include media-query($medium-down) {
     left: 0;
     top: -120px;
-    max-width: 300px;
+    max-width: 200px;
   }
 }
 
