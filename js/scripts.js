@@ -19,6 +19,17 @@ var screen3_bottom = $("#screen3").offset().top;
 var screen4_top = $("#screen4").offset().top - $(window).height();
 var screen4_bottom = $("#screen4").offset().top;
 
+$(window).resize(function() {
+  screen2_top = $("#screen2").offset().top - $(window).height();
+  screen2_bottom = $("#screen2").offset().top;
+
+  screen3_top = $("#screen3").offset().top - $(window).height();
+  screen3_bottom = $("#screen3").offset().top;
+
+  screen4_top = $("#screen4").offset().top - $(window).height();
+  screen4_bottom = $("#screen4").offset().top;
+});
+
 $(window).scroll(function() {
     var pos = $(window).scrollTop();
     setScreen(pos);
@@ -26,7 +37,9 @@ $(window).scroll(function() {
 
 function setScreen(pos) {
 
-    if (pos == screen2_top) {
+  console.log(screen2_top);
+
+    if (pos <= screen2_top) {
 
       if (curr !== "screen-1")  {
         prev = curr;
@@ -140,4 +153,11 @@ function to3from2() {
 function to2from3() {
   $(".screen").removeClass("screen-3");
   $(".screen").addClass("screen-2");
+}
+
+function menuToggle() {
+  var element = document.getElementById("toggle-icon");
+  element.classList.toggle("open");
+
+  $(".mobile-menu").slideToggle();
 }

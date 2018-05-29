@@ -10,11 +10,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="css/normalize.css?v=1.0">
-  <link rel="stylesheet" href="css/grid.css?v=1.0">
   <link rel="stylesheet" href="css/styles.css?v=1.0">
-  <link rel="stylesheet" href="css/screens.css?v=1.0">
-  <link rel="stylesheet" href="css/anims.css?v=1.0">
 
   <link rel="stylesheet" href="https://use.typekit.net/son8jif.css">
 
@@ -75,27 +71,48 @@
       </div>
     </div>
 
+    <div class="toggle">
+      <div id="toggle-icon" onclick="menuToggle();">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div class="mobile-menu">
+      <div class="login">
+        <a href="">Merchant Login</a>
+      </div>
+      <div class="download">
+        <a href="">
+          <span>Download Volley</span>
+          <span>Free on the App Store</span>
+        </a>
+      </div>
+    </div>
+
   </header>
 
   <main>
 
-    <section class="screen screen-1" data-from="0">
+    <section class="screen" data-from="0">
 
       <div class="container">
         <div class="text">
             <div class="text-inner text-1">
-              <h2>Volley lets you find stuff nearby</h2>
+              <h2>Volley lets you<br> find stuff nearby</h2>
               <p>See offers just around the corner</p>
             </div>
 
             <div class="text-inner text-2">
-              <h2>Get the things you want</h2>
-              <p>Like free coffee, last minute tickets, textbooks, and more.</p>
+              <h2>Get the<br> things you want</h2>
+              <p>Like free coffee, last minute tickets,<br> textbooks, and more.</p>
             </div>
 
             <div class="text-inner text-3">
-              <h2>Volley is wherever you are</h2>
-              <p>We only connect you with other verified users near you.</p>
+              <h2>Volley is<br> wherever you are</h2>
+              <p>We only connect you with other verified<br> users near you.</p>
             </div>
         </div>
 
@@ -104,6 +121,11 @@
           <div class="phone">
 
             <div class="thumbnail donuts">
+
+                <div class="price">
+                  <img src="img/free.svg" />
+                </div>
+
                 <img src="img/donuts.png" />
 
                 <div class="caption">
@@ -113,6 +135,11 @@
             </div>
 
             <div class="thumbnail giants">
+
+                <div class="price">
+                  <img src="img/80.svg" />
+                </div>
+
                 <img src="img/giants.png" />
 
                 <div class="caption">
@@ -122,6 +149,7 @@
             </div>
 
             <div class="thumbnail giants-big">
+
                 <img src="img/giants-big.png" />
 
                 <div class="caption">
@@ -147,6 +175,11 @@
             </div>
 
             <div class="thumbnail sat">
+
+                <div class="price">
+                  <img src="img/20.svg" />
+                </div>
+
                 <img src="img/sat.png" />
 
                 <div class="caption">

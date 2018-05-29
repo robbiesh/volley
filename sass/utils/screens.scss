@@ -9,6 +9,8 @@
 
   .donuts, .giants, .sat, .text-1 {
       opacity: 1;
+      transition-delay: 0.5s;
+      display: block;
   }
 }
 
@@ -38,6 +40,7 @@
         opacity: 1;
         margin-top: 0;
         transition-delay: 1s;
+        display: block;
     }
 
     .donuts {
@@ -52,6 +55,12 @@
 
     .giants {
       opacity: 1;
+
+      .price {
+        img {
+          width: 80px;
+        }
+      }
     }
 
     .giants-big {
@@ -103,6 +112,7 @@
     opacity: 1;
     margin-top: 0;
     transition-delay: 0.25s;
+    display: block;
   }
 
   .giants-big {

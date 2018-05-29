@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="55px" height="60px" viewBox="0 0 55 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>price/dollar</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="27.5" cy="27.5" r="27.5"></circle>
+        <filter x="-3.6%" y="-3.6%" width="107.3%" height="114.5%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="SourceAlpha" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="price/dollar" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="price/bg">
+            <g id="Oval-2">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#323134" fill-rule="evenodd" xlink:href="#path-1"></use>
+                <circle stroke="#FFFFFF" stroke-width="2" cx="27.5" cy="27.5" r="26.5"></circle>
+            </g>
+        </g>
+        <text id="80" font-family="ProximaNova-Bold, Proxima Nova" font-size="24.600001" font-weight="bold" fill="#FFFFFF">
+            <tspan x="15.4000003" y="36">80</tspan>
+        </text>
+        <text id="$" font-family="ProximaNova-Bold, Proxima Nova" font-size="12.0000005" font-weight="bold" fill="#FFFFFF">
+            <tspan x="7" y="28.2000002">$</tspan>
+        </text>
+    </g>
+</svg>
