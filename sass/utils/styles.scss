@@ -715,12 +715,14 @@ section {
 .green-circle {
   position: absolute;
   z-index: -10;
-  bottom: -200px;
-  left: -200px;
+  bottom: -250px;
+  left: -250px;
 
-  > svg {
+  > img {
     display: block;
     transition: all 0.3s;
+    width: 415px;
+    max-width: none;
     // animation: rotating 12s linear infinite;
   }
 
@@ -728,9 +730,9 @@ section {
     bottom: -215px;
     left: -150px;
 
-    // > svg {
-    //   width: 300px;
-    // }
+    > img {
+      width: 300px;
+    }
   }
 }
 
@@ -740,9 +742,11 @@ section {
   top: -150px;
   right: -250px;
 
-  > svg {
+  > img {
     display: block;
     transition: all 0.3s;
+    width: 480px;
+    max-width: none;
     // animation: rotating 12s linear infinite;
   }
 
@@ -750,9 +754,9 @@ section {
     top: -250px;
     right: -150px;
 
-    // > svg {
-    //   width: 300px;
-    // }
+    > img {
+      width: 300px;
+    }
   }
 }
 

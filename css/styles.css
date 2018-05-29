@@ -2931,18 +2931,23 @@ section {
 .green-circle {
   position: absolute;
   z-index: -10;
-  bottom: -200px;
-  left: -200px;
+  bottom: -250px;
+  left: -250px;
 }
-.green-circle > svg {
+.green-circle > img {
   display: block;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  width: 415px;
+  max-width: none;
 }
 @media only screen and (max-width: 1199px) {
   .green-circle {
     bottom: -215px;
     left: -150px;
+  }
+  .green-circle > img {
+    width: 300px;
   }
 }
 .dotted-circle {
@@ -2951,15 +2956,20 @@ section {
   top: -150px;
   right: -250px;
 }
-.dotted-circle > svg {
+.dotted-circle > img {
   display: block;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  width: 480px;
+  max-width: none;
 }
 @media only screen and (max-width: 1199px) {
   .dotted-circle {
     top: -250px;
     right: -150px;
+  }
+  .dotted-circle > img {
+    width: 300px;
   }
 }
 .footer {
