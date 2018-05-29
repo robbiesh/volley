@@ -369,15 +369,20 @@ section {
     position: relative;
 
     > img {
+      max-width: 275px;
 
-      @include media-query($large-down) {
-        max-width: 70%;
-      }
+      // @include media-query($large-down) {
+      //   max-width: 70%;
+      // }
     }
 
     .thumbnail {
       box-shadow: 0 10px 10px 0 rgba(0,0,0,0.30);
     }
+}
+
+.thumbnail-small {
+  max-width: 175px;
 }
 
 .thumbnail {
@@ -401,7 +406,7 @@ section {
 }
 
 .donuts {
-    top: -100px;
+    top: -25px;
     right: -100px;
     opacity: 0;
     transition: all 0.3s;
@@ -424,7 +429,7 @@ section {
 }
 
 .sat {
-    bottom: -130px;
+    bottom: -60px;
     right: -30px;
     transition: all 0.3s;
     opacity: 0;
@@ -498,7 +503,7 @@ section {
 
         &:first-of-type {
             font-weight: bold;
-            font-size: 20px;
+            font-size: 16px;
             padding-bottom: 5px;
 
             @include media-query($medium-down) {
@@ -507,7 +512,7 @@ section {
         }
 
         &:last-of-type {
-            font-size: 16px;
+            font-size: 12px;
             font-weight: 600;
 
             img {

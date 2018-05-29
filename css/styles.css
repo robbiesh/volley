@@ -2588,14 +2588,15 @@ section {
 .phone {
   position: relative;
 }
-@media only screen and (max-width: 1199px) {
-  .phone > img {
-    max-width: 70%;
-  }
+.phone > img {
+  max-width: 275px;
 }
 .phone .thumbnail {
   -webkit-box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.3);
   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.3);
+}
+.thumbnail-small {
+  max-width: 175px;
 }
 .thumbnail {
   position: absolute;
@@ -2617,7 +2618,7 @@ section {
   }
 }
 .donuts {
-  top: -100px;
+  top: -25px;
   right: -100px;
   opacity: 0;
   -webkit-transition: all 0.3s;
@@ -2642,7 +2643,7 @@ section {
   }
 }
 .sat {
-  bottom: -130px;
+  bottom: -60px;
   right: -30px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -2719,7 +2720,7 @@ section {
 }
 .caption span:first-of-type {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 16px;
   padding-bottom: 5px;
 }
 @media only screen and (max-width: 767px) {
@@ -2728,7 +2729,7 @@ section {
   }
 }
 .caption span:last-of-type {
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 600;
 }
 .caption span:last-of-type img {
