@@ -22,10 +22,10 @@
                             <circle stroke="#FFFFFF" stroke-width="2" cx="27.5" cy="27.5" r="26.5"></circle>
                         </g>
                     </g>
-                    <text id="80" font-family="ProximaNova-Bold, Proxima Nova" font-size="24.600001" font-weight="bold" fill="#FFFFFF">
+                    <text id="80" font-family="Proxima Nova" font-size="24.600001" font-weight="bold" fill="#FFFFFF">
                         <tspan x="15.4000003" y="36">20</tspan>
                     </text>
-                    <text id="$" font-family="ProximaNova-Bold, Proxima Nova" font-size="12.0000005" font-weight="bold" fill="#FFFFFF">
+                    <text id="$" font-family="Proxima Nova" font-size="12.0000005" font-weight="bold" fill="#FFFFFF">
                         <tspan x="7" y="28.2000002">$</tspan>
                     </text>
                 </g>

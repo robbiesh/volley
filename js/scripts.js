@@ -37,8 +37,6 @@ $(window).scroll(function() {
 
 function setScreen(pos) {
 
-  console.log(screen2_top);
-
     if (pos <= screen2_top) {
 
       if (curr !== "screen-1")  {
