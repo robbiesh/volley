@@ -2593,6 +2593,10 @@ section {
     max-width: 70%;
   }
 }
+.phone .thumbnail {
+  -webkit-box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.3);
+}
 .thumbnail {
   position: absolute;
   text-align: left;
@@ -3088,13 +3092,13 @@ section {
   left: -28px;
   z-index: 100;
 }
-.price img {
+.price svg {
   width: 55px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 @media only screen and (max-width: 767px) {
-  .price img {
+  .price svg {
     width: 40px;
   }
 }

@@ -374,6 +374,10 @@ section {
         max-width: 70%;
       }
     }
+
+    .thumbnail {
+      box-shadow: 0 10px 10px 0 rgba(0,0,0,0.30);
+    }
 }
 
 .thumbnail {
@@ -876,7 +880,7 @@ section {
   left: -28px;
   z-index: 100;
 
-  img {
+  svg {
     width: 55px;
     transition: all 0.3s;
 
