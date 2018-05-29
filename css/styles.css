@@ -2607,6 +2607,8 @@ section {
 }
 .thumbnail > img {
   display: block;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
   .thumbnail:not(.giants-big):not(.nico) {
@@ -2942,9 +2944,6 @@ section {
     bottom: -215px;
     left: -150px;
   }
-  .green-circle > svg {
-    width: 300px;
-  }
 }
 .dotted-circle {
   position: absolute;
@@ -2961,9 +2960,6 @@ section {
   .dotted-circle {
     top: -250px;
     right: -150px;
-  }
-  .dotted-circle > svg {
-    width: 300px;
   }
 }
 .footer {
