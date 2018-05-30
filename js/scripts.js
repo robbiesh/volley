@@ -10,23 +10,23 @@ jQuery(document).ready(function() {
 var prev = "";
 var curr = "";
 
-var screen2_top = $("#screen2").offset().top - $(window).height();
+var screen2_top = $("#screen2").offset().top - window.innerHeight;
 var screen2_bottom = $("#screen2").offset().top;
 
-var screen3_top = $("#screen3").offset().top - $(window).height();
+var screen3_top = $("#screen3").offset().top - window.innerHeight;
 var screen3_bottom = $("#screen3").offset().top;
 
-var screen4_top = $("#screen4").offset().top - $(window).height();
+var screen4_top = $("#screen4").offset().top - window.innerHeight;
 var screen4_bottom = $("#screen4").offset().top;
 
 $(window).resize(function() {
-  screen2_top = $("#screen2").offset().top - $(window).height();
+  screen2_top = $("#screen2").offset().top - window.innerHeight;
   screen2_bottom = $("#screen2").offset().top;
 
-  screen3_top = $("#screen3").offset().top - $(window).height();
+  screen3_top = $("#screen3").offset().top - window.innerHeight;
   screen3_bottom = $("#screen3").offset().top;
 
-  screen4_top = $("#screen4").offset().top - $(window).height();
+  screen4_top = $("#screen4").offset().top - window.innerHeight;
   screen4_bottom = $("#screen4").offset().top;
 });
 
