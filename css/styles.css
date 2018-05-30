@@ -2459,6 +2459,11 @@ section {
   align-items: center;
   padding: 0 35px;
   text-transform: uppercase;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.download:hover {
+  opacity: 0.8;
 }
 .download span {
   display: block;
@@ -3066,6 +3071,8 @@ section {
   border-radius: 10px;
   padding-left: 30px;
   position: relative;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .footer-inner .download span {
   display: block;
@@ -3136,6 +3143,11 @@ section {
 }
 .site-footer a, .site-footer span {
   color: white;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.site-footer a:hover, .site-footer span:hover {
+  opacity: 0.8;
 }
 .site-footer-name {
   text-align: right;
