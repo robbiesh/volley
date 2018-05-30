@@ -141,7 +141,8 @@ section {
     // padding: 30px 0;
     width: 150px;
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: bold;
 
     @include media-query($large-down) {
       width: 100px;
@@ -390,7 +391,7 @@ section {
     position: relative;
 
     > img {
-      max-width: 275px;
+      max-width: 305px;
 
       @include media-query($medium-down) {
         max-width: 200px;
@@ -442,8 +443,8 @@ section {
 }
 
 .giants {
-    left: -100px;
-    top: 20px;
+    left: -75px;
+    top: -25px;
     transition: all 0.3s;
     opacity: 0;
     height: 243px;
@@ -496,10 +497,11 @@ section {
 .nico {
   left: -100px;
   top: 20px;
-  transition: all 0.3s;
+  // transition: all 0.3s;
   opacity: 0;
   height: 455px;
   width: 250px;
+  transform: rotateY(-180deg);
 
   @include media-query($medium-down) {
     width: 200px;
@@ -522,7 +524,7 @@ section {
 
         &:first-of-type {
             font-weight: bold;
-            font-size: 16px;
+            font-size: 12px;
             padding-bottom: 5px;
 
             @include media-query($medium-down) {
@@ -699,11 +701,7 @@ section {
 
         > span {
             font-weight: bold;
-            font-size: 17px;
-
-            @include media-query($medium-down) {
-              font-size: 12px;
-            }
+            font-size: 12px;
         }
     }
 }
@@ -716,10 +714,10 @@ section {
 
 .button {
     background-color: $purple;
-    width: 200px;
+    width: 230px;
     padding: 15px;
     text-align: center;
-    bottom: 55px;
+    bottom: 50px;
     left: 50%;
     transform: translate(-50%);
     position: absolute;
@@ -1089,4 +1087,31 @@ section {
         border-bottom-color: $purple;
     }
   }
+}
+
+
+.card-container {
+  height: 150px;
+  perspective: 600;
+  position: relative;
+  width: 150px;
+}
+.card {
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+  width: 100%;
+}
+.card:hover {
+  transform: rotateY(180deg);
+}
+.card .side {
+  backface-visibility: hidden;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.card .back {
+  transform: rotateY(180deg);
 }

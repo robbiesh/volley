@@ -73,7 +73,16 @@
         width: 200px;
         height: 365px;
       }
+
+      .caption {
+        span {
+          &:first-of-type {
+              font-size: 18px;
+          }
+        }
+      }
     }
+
 
     .chat {
       transition-delay: 1s;
@@ -155,7 +164,7 @@
 
     transform: rotateY(-180deg);
     backface-visibility: hidden;
-    transform-style: preserve-3d;
+    // transform-style: preserve-3d;
 
     .price {
       display: none;

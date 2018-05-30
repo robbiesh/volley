@@ -2365,7 +2365,8 @@ section {
 .menu li {
   width: 150px;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: bold;
 }
 @media only screen and (max-width: 1200px) {
   .menu li {
@@ -2611,7 +2612,7 @@ section {
   position: relative;
 }
 .phone > img {
-  max-width: 275px;
+  max-width: 305px;
 }
 @media only screen and (max-width: 768px) {
   .phone > img {
@@ -2662,8 +2663,8 @@ section {
   }
 }
 .giants {
-  left: -100px;
-  top: 20px;
+  left: -75px;
+  top: -25px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   opacity: 0;
@@ -2693,11 +2694,11 @@ section {
 .nico {
   left: -100px;
   top: 20px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   opacity: 0;
   height: 455px;
   width: 250px;
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
 }
 @media only screen and (max-width: 768px) {
   .nico {
@@ -2721,7 +2722,7 @@ section {
 }
 .caption span:first-of-type {
   font-weight: bold;
-  font-size: 16px;
+  font-size: 12px;
   padding-bottom: 5px;
 }
 @media only screen and (max-width: 768px) {
@@ -2905,12 +2906,7 @@ section {
 }
 .person > div > span {
   font-weight: bold;
-  font-size: 17px;
-}
-@media only screen and (max-width: 768px) {
-  .person > div > span {
-    font-size: 12px;
-  }
+  font-size: 12px;
 }
 @media only screen and (max-width: 768px) {
   .stars {
@@ -2919,10 +2915,10 @@ section {
 }
 .button {
   background-color: #512DA8;
-  width: 200px;
+  width: 230px;
   padding: 15px;
   text-align: center;
-  bottom: 55px;
+  bottom: 50px;
   left: 50%;
   -webkit-transform: translate(-50%);
   transform: translate(-50%);
@@ -3262,6 +3258,37 @@ section {
   color: #512DA8;
   border-bottom-color: #512DA8;
 }
+.card-container {
+  height: 150px;
+  -webkit-perspective: 600;
+  perspective: 600;
+  position: relative;
+  width: 150px;
+}
+.card {
+  height: 100%;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  width: 100%;
+}
+.card:hover {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.card .side {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.card .back {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
 .screen-1 .donuts, .screen-1 .giants, .screen-1 .sat, .screen-1 .text-1 {
   opacity: 1;
   -webkit-transition-delay: 0.5s;
@@ -3310,6 +3337,9 @@ section {
     width: 200px;
     height: 365px;
   }
+}
+.screen-2 .giants .caption span:first-of-type {
+  font-size: 18px;
 }
 .screen-2 .chat {
   -webkit-transition-delay: 1s;
@@ -3367,8 +3397,6 @@ section {
   transform: rotateY(-180deg);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
 }
 .screen-3 .giants .price, .screen-4 .giants .price {
   display: none;
