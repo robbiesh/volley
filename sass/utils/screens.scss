@@ -146,9 +146,44 @@
   //   // transform-origin: center;
   // }
 
+  .giants {
+    opacity: 1;
+    width: 250px;
+    max-width: none;
+    transition: 0.6s;
+    height: 480px;
+
+
+    transform: rotateY(-180deg);
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+
+    .price {
+      display: none;
+    }
+
+    @include media-query($medium-down) {
+      width: 200px;
+      height: 365px;
+    }
+  }
+
   .nico {
     opacity: 1;
-    transform: scale(1);
+    max-width: none;
+    transition: 0.6s;
+
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+
+    transform: rotateY(0deg);
+
+    // transition-property: width, height;
+    // transition-delay: 0s, 0.5s;
+
+    // @include media-query($medium-down) {
+    //   width: 200px;
+    // }
   }
 
   .facebook-button {

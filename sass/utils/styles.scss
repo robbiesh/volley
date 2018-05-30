@@ -270,13 +270,13 @@ section {
 .text {
   h2 {
     font-weight: 900;
-    font-size: 60px;
+    font-size: 50px;
     color: $gray;
     margin-bottom: 20px;
   }
 
   p {
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 500;
     color: $gray;
   }
@@ -416,6 +416,7 @@ section {
     text-align: left;
     transition: all 0.3s;
     border-radius: 10px;
+    background: white;
 
     > img {
         display: block;
@@ -489,28 +490,17 @@ section {
 
 .nico {
   left: -100px;
-  top: 50px;
-  opacity: 0;
+  top: 20px;
   transition: all 0.3s;
-  transform: scale(0.1, 1);
-  // transform: scale(0.5);
-  // transform-origin: top left;
-  // transition-delay: 0.75s;
-
-  > img {
-      border-top-right-radius: 10px;
-      border-top-left-radius: 10px;
-      max-width: 300px;
-
-      @include media-query($medium-down) {
-        max-width: 100%;
-      }
-  }
+  opacity: 0;
+  height: 480px;
+  width: 250px;
 
   @include media-query($medium-down) {
-    left: 0;
-    top: -120px;
-    max-width: 200px;
+    width: 200px;
+    left: -50px;
+    top: -20px;
+    height: 365px;
   }
 }
 
@@ -567,6 +557,10 @@ section {
     padding: 10px;
     display: block;
     margin: 0 auto 5px;
+  }
+
+  @include media-query($medium-down) {
+    height: 100px;
   }
 }
 
@@ -770,6 +764,10 @@ section {
     border-radius: 50%;
     width: 21px;
     height: 21px;
+  }
+
+  span {
+    padding: 0 !important;
   }
 }
 

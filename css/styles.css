@@ -2499,12 +2499,12 @@ section {
 }
 .text h2 {
   font-weight: 900;
-  font-size: 60px;
+  font-size: 50px;
   color: #323134;
   margin-bottom: 20px;
 }
 .text p {
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 500;
   color: #323134;
 }
@@ -2637,6 +2637,7 @@ section {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   border-radius: 10px;
+  background: white;
 }
 .thumbnail > img {
   display: block;
@@ -2686,28 +2687,19 @@ section {
 }
 .nico {
   left: -100px;
-  top: 50px;
-  opacity: 0;
+  top: 20px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  -webkit-transform: scale(0.1, 1);
-  transform: scale(0.1, 1);
-}
-.nico > img {
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-  max-width: 300px;
-}
-@media only screen and (max-width: 768px) {
-  .nico > img {
-    max-width: 100%;
-  }
+  opacity: 0;
+  height: 480px;
+  width: 250px;
 }
 @media only screen and (max-width: 768px) {
   .nico {
-    left: 0;
-    top: -120px;
-    max-width: 200px;
+    width: 200px;
+    left: -50px;
+    top: -20px;
+    height: 365px;
   }
 }
 .caption {
@@ -2761,6 +2753,11 @@ section {
   padding: 10px;
   display: block;
   margin: 0 auto 5px;
+}
+@media only screen and (max-width: 768px) {
+  .caption-nico {
+    height: 100px;
+  }
 }
 .chat {
   background-color: white;
@@ -2974,6 +2971,9 @@ section {
   border-radius: 50%;
   width: 21px;
   height: 21px;
+}
+.facebook-button span {
+  padding: 0 !important;
 }
 .facebook {
   height: 60px;
@@ -3344,10 +3344,40 @@ section {
   transition-delay: 0.25s;
   display: block;
 }
+.screen-3 .giants, .screen-4 .giants {
+  opacity: 1;
+  width: 250px;
+  max-width: none;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  height: 480px;
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.screen-3 .giants .price, .screen-4 .giants .price {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .screen-3 .giants, .screen-4 .giants {
+    width: 200px;
+    height: 365px;
+  }
+}
 .screen-3 .nico, .screen-4 .nico {
   opacity: 1;
-  -webkit-transform: scale(1);
-  transform: scale(1);
+  max-width: none;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
 }
 .screen-3 .facebook-button, .screen-4 .facebook-button {
   right: -50px;
