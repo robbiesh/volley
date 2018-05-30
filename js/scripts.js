@@ -105,8 +105,6 @@ function setScreen(pos) {
         prev = curr;
         curr = "screen-4";
 
-        $(".nav-pointer").hide();
-
         $(".screen").addClass(curr);
         $(".screen").removeClass("screen-1 screen-2 screen-3");
 
