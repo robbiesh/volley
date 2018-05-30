@@ -2755,6 +2755,9 @@ section {
   display: block;
   margin-bottom: 5px;
 }
+.caption-nico > span:first-of-type {
+  font-size: 18px;
+}
 .caption-nico > img {
   padding: 10px;
   display: block;
