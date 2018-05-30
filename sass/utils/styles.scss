@@ -99,7 +99,7 @@ section {
 }
 
 .back {
-  .donuts, .giants, .sat, .text-1, .text-2, .text-3, .nico, .giants-big, .message, .button {
+  .donuts, .giants, .sat, .text-1, .text-2, .text-3, .nico, .giants-big,  .button, .chat, .person {
     transition-delay: 0s !important;
     animation-delay: 0s !important;
   }
@@ -398,7 +398,17 @@ section {
 }
 
 .thumbnail-small {
-  max-width: 175px;
+  // max-width: 175px;
+  width: 175px;
+  background: white;
+
+  @include media-query($large) {
+    width: 150px;
+  }
+
+  @include media-query($medium-down) {
+    width: 110px;
+  }
 }
 
 .thumbnail {
@@ -411,16 +421,6 @@ section {
         display: block;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
-    }
-
-    &:not(.giants-big):not(.nico) {
-      @include media-query($large) {
-        max-width: 150px;
-      }
-
-      @include media-query($medium-down) {
-        max-width: 110px;
-      }
     }
 }
 
@@ -440,10 +440,13 @@ section {
     top: 20px;
     transition: all 0.3s;
     opacity: 0;
+    height: 243px;
 
     @include media-query($medium-down) {
+      width: 110px;
       left: -50px;
       top: -20px;
+      height: 182px;
     }
 }
 
@@ -459,30 +462,30 @@ section {
     }
 }
 
-.giants-big {
-    left: -100px;
-    top: 20px;
-    opacity: 0;
-    transform: scale(0.5);
-    transform-origin: top left;
-    transition-delay: 0.75s;
-    transition: all 0.3s;
-
-    > img {
-        border-top-right-radius: 10px;
-        border-top-left-radius: 10px;
-        max-width: 300px;
-    }
-
-    @include media-query($medium-down) {
-      left: -50px;
-      top: -20px;
-
-      > img {
-        max-width: 100%;
-      }
-    }
-}
+// .giants-big {
+//     left: -100px;
+//     top: 20px;
+//     opacity: 0;
+//     transform: scale(0.5);
+//     transform-origin: top left;
+//     transition-delay: 0.75s;
+//     transition: all 0.3s;
+//
+//     > img {
+//         border-top-right-radius: 10px;
+//         border-top-left-radius: 10px;
+//         max-width: 300px;
+//     }
+//
+//     @include media-query($medium-down) {
+//       left: -50px;
+//       top: -20px;
+//
+//       > img {
+//         max-width: 100%;
+//       }
+//     }
+// }
 
 .nico {
   left: -100px;
@@ -569,11 +572,19 @@ section {
 
 .chat {
     background-color: white;
+    opacity: 0;
+    height: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .message-container {
-    height: 100px;
+    height: 75px;
     position: relative;
+
+    @include media-query($medium-down) {
+      height: 60px;
+    }
 }
 
 .message {
@@ -597,7 +608,13 @@ section {
     p {
         color: white;
         margin: 0;
-        font-size: 17px;
+        font-size: 15px;
+        line-height: 1.25em;
+        font-style: italic;
+
+        @include media-query($medium-down) {
+          font-size: 11px;
+        }
     }
 
     &:after {
@@ -625,6 +642,11 @@ section {
         bottom: -13px;
         z-index: 1;
     }
+
+    @include media-query($medium-down) {
+      height: 50px;
+      padding: 10px 16px;
+    }
 }
 
 .message-shadow {
@@ -650,6 +672,12 @@ section {
         bottom: -12px;
         z-index: 1;
     }
+
+    @include media-query($medium-down) {
+      height: 50px;
+      top: 0;
+      left: 25px;
+    }
 }
 
 .person {
@@ -664,13 +692,27 @@ section {
 
         img {
             margin-right: 10px;
+
+            @include media-query($medium-down) {
+              width: 30px;
+            }
         }
 
         > span {
             font-weight: bold;
             font-size: 17px;
+
+            @include media-query($medium-down) {
+              font-size: 12px;
+            }
         }
     }
+}
+
+.stars {
+  @include media-query($medium-down) {
+    width: 50px;
+  }
 }
 
 .button {
@@ -691,6 +733,15 @@ section {
         color: white;
         font-size: 18px;
         font-weight: bold;
+    }
+
+    @include media-query($medium-down) {
+      width: 145px;
+      bottom: 40px;
+
+      span {
+        font-size: 14px;
+      }
     }
 }
 

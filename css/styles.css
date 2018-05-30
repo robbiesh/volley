@@ -2325,7 +2325,7 @@ section {
   -ms-flex: 1;
   flex: 1;
 }
-.back .donuts, .back .giants, .back .sat, .back .text-1, .back .text-2, .back .text-3, .back .nico, .back .giants-big, .back .message, .back .button {
+.back .donuts, .back .giants, .back .sat, .back .text-1, .back .text-2, .back .text-3, .back .nico, .back .giants-big, .back .button, .back .chat, .back .person {
   -webkit-transition-delay: 0s !important;
   transition-delay: 0s !important;
   -webkit-animation-delay: 0s !important;
@@ -2618,7 +2618,18 @@ section {
   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.3);
 }
 .thumbnail-small {
-  max-width: 175px;
+  width: 175px;
+  background: white;
+}
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+  .thumbnail-small {
+    width: 150px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .thumbnail-small {
+    width: 110px;
+  }
 }
 .thumbnail {
   position: absolute;
@@ -2631,16 +2642,6 @@ section {
   display: block;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-}
-@media only screen and (min-width: 769px) and (max-width: 1200px) {
-  .thumbnail:not(.giants-big):not(.nico) {
-    max-width: 150px;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .thumbnail:not(.giants-big):not(.nico) {
-    max-width: 110px;
-  }
 }
 .donuts {
   top: -25px;
@@ -2660,11 +2661,14 @@ section {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   opacity: 0;
+  height: 243px;
 }
 @media only screen and (max-width: 768px) {
   .giants {
+    width: 110px;
     left: -50px;
     top: -20px;
+    height: 182px;
   }
 }
 .sat {
@@ -2678,33 +2682,6 @@ section {
   .sat {
     bottom: 15px;
     right: 10px;
-  }
-}
-.giants-big {
-  left: -100px;
-  top: 20px;
-  opacity: 0;
-  -webkit-transform: scale(0.5);
-  transform: scale(0.5);
-  -webkit-transform-origin: top left;
-  transform-origin: top left;
-  -webkit-transition-delay: 0.75s;
-  transition-delay: 0.75s;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-.giants-big > img {
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-  max-width: 300px;
-}
-@media only screen and (max-width: 768px) {
-  .giants-big {
-    left: -50px;
-    top: -20px;
-  }
-  .giants-big > img {
-    max-width: 100%;
   }
 }
 .nico {
@@ -2787,10 +2764,19 @@ section {
 }
 .chat {
   background-color: white;
+  opacity: 0;
+  height: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 .message-container {
-  height: 100px;
+  height: 75px;
   position: relative;
+}
+@media only screen and (max-width: 768px) {
+  .message-container {
+    height: 60px;
+  }
 }
 .message {
   position: absolute;
@@ -2817,7 +2803,14 @@ section {
 .message p {
   color: white;
   margin: 0;
-  font-size: 17px;
+  font-size: 15px;
+  line-height: 1.25em;
+  font-style: italic;
+}
+@media only screen and (max-width: 768px) {
+  .message p {
+    font-size: 11px;
+  }
 }
 .message:after {
   content: "";
@@ -2843,6 +2836,12 @@ section {
   bottom: -13px;
   z-index: 1;
 }
+@media only screen and (max-width: 768px) {
+  .message {
+    height: 50px;
+    padding: 10px 16px;
+  }
+}
 .message-shadow {
   background-color: rgba(0, 0, 0, 0.05);
   position: absolute;
@@ -2867,6 +2866,13 @@ section {
   bottom: -12px;
   z-index: 1;
 }
+@media only screen and (max-width: 768px) {
+  .message-shadow {
+    height: 50px;
+    top: 0;
+    left: 25px;
+  }
+}
 .person {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2890,9 +2896,24 @@ section {
 .person > div img {
   margin-right: 10px;
 }
+@media only screen and (max-width: 768px) {
+  .person > div img {
+    width: 30px;
+  }
+}
 .person > div > span {
   font-weight: bold;
   font-size: 17px;
+}
+@media only screen and (max-width: 768px) {
+  .person > div > span {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .stars {
+    width: 50px;
+  }
 }
 .button {
   background-color: #512DA8;
@@ -2915,6 +2936,15 @@ section {
   color: white;
   font-size: 18px;
   font-weight: bold;
+}
+@media only screen and (max-width: 768px) {
+  .button {
+    width: 145px;
+    bottom: 40px;
+  }
+  .button span {
+    font-size: 14px;
+  }
 }
 .facebook-button {
   background-color: #4266B2;
@@ -3249,19 +3279,42 @@ section {
 }
 .screen-2 .giants {
   opacity: 1;
+  width: 250px;
+  max-width: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  height: 480px;
+  -webkit-transition-property: width, height;
+  transition-property: width, height;
+  -webkit-transition-delay: 0s, 0.5s;
+  transition-delay: 0s, 0.5s;
 }
-.screen-2 .giants .price img {
+.screen-2 .giants .price svg {
   width: 80px;
+  height: 74px;
 }
-.screen-2 .giants-big {
+@media only screen and (max-width: 768px) {
+  .screen-2 .giants {
+    width: 200px;
+    height: 365px;
+  }
+}
+.screen-2 .chat {
+  -webkit-transition-delay: 1s;
+  transition-delay: 1s;
   opacity: 1;
-  -webkit-transform: scale(1);
-  transform: scale(1);
+  height: 150px;
+}
+@media only screen and (max-width: 768px) {
+  .screen-2 .chat {
+    height: 110px;
+  }
 }
 .screen-2 .button {
   opacity: 1;
-  -webkit-transition-delay: 1.75s;
-  transition-delay: 1.75s;
+  -webkit-transition-delay: 2.25s;
+  transition-delay: 2.25s;
+  z-index: 100;
 }
 .screen-2 .message {
   -webkit-animation-name: bounceInUp;
@@ -3290,13 +3343,6 @@ section {
   -webkit-transition-delay: 0.25s;
   transition-delay: 0.25s;
   display: block;
-}
-.screen-3 .giants-big, .screen-4 .giants-big {
-  opacity: 0;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-  -webkit-transform: scale(0.1, 1);
-  transform: scale(0.1, 1);
 }
 .screen-3 .nico, .screen-4 .nico {
   opacity: 1;
