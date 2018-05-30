@@ -58,7 +58,7 @@
       width: 250px;
       max-width: none;
       transition: all 0.3s;
-      height: 480px;
+      height: 455px;
       transition-property: width, height;
       transition-delay: 0s, 0.5s;
 
@@ -78,7 +78,7 @@
     .chat {
       transition-delay: 1s;
       opacity: 1;
-      height: 150px;
+      height: 140px;
 
       @include media-query($medium-down) {
         height: 110px;
@@ -151,7 +151,7 @@
     width: 250px;
     max-width: none;
     transition: 0.6s;
-    height: 480px;
+    height: 455px;
 
 
     transform: rotateY(-180deg);
