@@ -55,7 +55,7 @@ img {
   min-height: 100vh;
 
   @include media-query($large-down) {
-    padding-top: 90px;
+    padding-top: 80px;
   }
 }
 
@@ -300,7 +300,7 @@ section {
   }
 
   @include media-query($medium-down) {
-    height: 150px;
+    height: 135px;
   }
 }
 
@@ -454,7 +454,7 @@ section {
     opacity: 0;
 
     @include media-query($medium-down) {
-      bottom: -5px;
+      bottom: 15px;
       right: 10px;
     }
 }

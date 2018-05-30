@@ -2276,7 +2276,7 @@ img {
 }
 @media only screen and (max-width: 1200px) {
   .container {
-    padding-top: 90px;
+    padding-top: 80px;
   }
 }
 .container--flex {
@@ -2528,7 +2528,7 @@ section {
 }
 @media only screen and (max-width: 768px) {
   .text {
-    height: 150px;
+    height: 135px;
   }
 }
 .text-inner {
@@ -2676,7 +2676,7 @@ section {
 }
 @media only screen and (max-width: 768px) {
   .sat {
-    bottom: -5px;
+    bottom: 15px;
     right: 10px;
   }
 }
