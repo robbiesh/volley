@@ -2276,7 +2276,7 @@ img {
 }
 @media only screen and (max-width: 1200px) {
   .container {
-    padding-top: 80px;
+    padding-top: 100px;
   }
 }
 .container--flex {
@@ -2582,6 +2582,10 @@ section {
 @media only screen and (max-width: 768px) {
   .image {
     padding: 30px;
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    -webkit-transform-origin: top;
+    transform-origin: top;
   }
 }
 .screen {
