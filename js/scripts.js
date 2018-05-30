@@ -49,7 +49,7 @@ function setScreen(pos) {
           $(".screen").removeClass("back");
         }
 
-        $(".nav-pointer").css("left", $(".nav--screen-1").position().left - 25);
+        $(".nav-pointer").css("left", $(".nav--screen-1").position().left - 10);
 
         $(".screen").addClass(curr);
         $(".screen").removeClass("screen-2 screen-3 screen-4");
@@ -69,7 +69,7 @@ function setScreen(pos) {
            $(".screen").removeClass("back");
          }
 
-         $(".nav-pointer").css("left", $(".nav--screen-2").position().left - 25);
+         $(".nav-pointer").css("left", $(".nav--screen-2").position().left - 10);
 
          $(".screen").addClass(curr);
          $(".screen").removeClass("screen-1 screen-3 screen-4");
@@ -90,7 +90,7 @@ function setScreen(pos) {
           $(".screen").removeClass("back");
         }
 
-        $(".nav-pointer").css("left", $(".nav--screen-3").position().left - 25);
+        $(".nav-pointer").css("left", $(".nav--screen-3").position().left - 10);
 
         $(".screen").addClass(curr);
         $(".screen").removeClass("screen-1 screen-2 screen-4");

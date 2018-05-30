@@ -161,10 +161,10 @@ section {
     top: 0;
     left: 0;
     transition: all 0.3s;
-    width: 200px;
+    width: 170px;
     // opacity: 0;
 
-    
+
 
     // &:before {
     //   top: 0;
@@ -413,7 +413,7 @@ section {
 .thumbnail {
     position: absolute;
     text-align: left;
-    transition: all 0.3s;
+    transition: width 0.3s, height 0.3s;
     border-radius: 10px;
     background: white;
 
@@ -461,7 +461,6 @@ section {
     transition: all 0.3s;
     opacity: 0;
     height: 235px;
-
 
     @include media-query($medium-down) {
       width: 110px;
