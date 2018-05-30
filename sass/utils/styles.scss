@@ -144,9 +144,9 @@ section {
     font-size: 16px;
     font-weight: bold;
 
-    @include media-query($large-down) {
-      width: 100px;
-    }
+    // @include media-query($large-down) {
+    //   width: 100px;
+    // }
   }
 
   a {
@@ -348,7 +348,7 @@ section {
   }
 
   @include media-query($large-down) {
-    padding: 120px 60px;
+    padding: 30px;
   }
 
   @include media-query($medium-down) {
@@ -446,7 +446,7 @@ section {
 
 .giants {
     left: -75px;
-    top: -25px;
+    top: -15px;
     transition: all 0.3s;
     opacity: 0;
     height: 243px;
@@ -498,10 +498,10 @@ section {
 
 .nico {
   left: -75px;
-  top: -25px;
+  top: -15px;
   // transition: all 0.3s;
   opacity: 0;
-  height: 455px;
+  height: 450px;
   width: 250px;
   transform: rotateY(-180deg);
 
@@ -562,12 +562,17 @@ section {
     margin-bottom: 5px;
 
     &:first-of-type {
-      font-size: 18px;
+      font-size: 26px;
+      font-weight: 600;
+    }
+
+    &:last-of-type {
+      font-size: 14px;
     }
   }
 
   > img {
-    padding: 10px;
+    padding: 5px 0 15px;
     display: block;
     margin: 0 auto 5px;
   }
@@ -597,7 +602,7 @@ section {
 .message {
     position: absolute;
     top: 0;
-    left: 25px;
+    left: 15px;
     width: 100%;
     background-color: #64b5f7;
 	  border: solid 2px #ffffff;
@@ -611,6 +616,7 @@ section {
     transition-origin: bottom left;
     transform: scale(0.5);
     opacity: 0;
+    filter: drop-shadow(5px 5px 0 rgba(0,0,0,0.05));
 
     p {
         color: white;
@@ -699,6 +705,7 @@ section {
 
         img {
             margin-right: 10px;
+            width: 34px;
 
             @include media-query($medium-down) {
               width: 30px;
@@ -734,7 +741,7 @@ section {
 
     span {
         color: white;
-        font-size: 18px;
+        font-size: 14px;
         font-weight: bold;
     }
 
@@ -753,7 +760,7 @@ section {
   color: white;
   font-weight: bold;
   font-size: 18px;
-  padding: 15px;
+  padding: 20px 15px;
   border-radius: 10px;
   position: relative;
   position: absolute;
@@ -762,10 +769,12 @@ section {
   width: 100%;
   right: -9999px;
   transition: all 0.3s;
+  border: 2px solid white;
+  filter: drop-shadow(5px 5px 0 rgba(0,0,0,0.05));
 
   > div {
     position: absolute;
-    left: 15px;
+    left: 18px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 100;
@@ -777,6 +786,8 @@ section {
 
   span {
     padding: 0 !important;
+    font-size: 16px !important;
+    margin-left: 19px;
   }
 }
 

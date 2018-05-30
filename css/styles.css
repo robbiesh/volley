@@ -2368,11 +2368,6 @@ section {
   font-size: 16px;
   font-weight: bold;
 }
-@media only screen and (max-width: 1200px) {
-  .menu li {
-    width: 100px;
-  }
-}
 .menu a {
   color: white;
   text-decoration: none;
@@ -2576,7 +2571,7 @@ section {
 }
 @media only screen and (max-width: 1200px) {
   .image {
-    padding: 120px 60px;
+    padding: 30px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -2668,7 +2663,7 @@ section {
 }
 .giants {
   left: -75px;
-  top: -25px;
+  top: -15px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   opacity: 0;
@@ -2697,9 +2692,9 @@ section {
 }
 .nico {
   left: -75px;
-  top: -25px;
+  top: -15px;
   opacity: 0;
-  height: 455px;
+  height: 450px;
   width: 250px;
   -webkit-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
@@ -2760,10 +2755,14 @@ section {
   margin-bottom: 5px;
 }
 .caption-nico > span:first-of-type {
-  font-size: 18px;
+  font-size: 26px;
+  font-weight: 600;
+}
+.caption-nico > span:last-of-type {
+  font-size: 14px;
 }
 .caption-nico > img {
-  padding: 10px;
+  padding: 5px 0 15px;
   display: block;
   margin: 0 auto 5px;
 }
@@ -2791,7 +2790,7 @@ section {
 .message {
   position: absolute;
   top: 0;
-  left: 25px;
+  left: 15px;
   width: 100%;
   background-color: #64b5f7;
   border: solid 2px #ffffff;
@@ -2809,6 +2808,8 @@ section {
   -webkit-transform: scale(0.5);
   transform: scale(0.5);
   opacity: 0;
+  -webkit-filter: drop-shadow(5px 5px 0 rgba(0, 0, 0, 0.05));
+  filter: drop-shadow(5px 5px 0 rgba(0, 0, 0, 0.05));
 }
 .message p {
   color: white;
@@ -2905,6 +2906,7 @@ section {
 }
 .person > div img {
   margin-right: 10px;
+  width: 34px;
 }
 @media only screen and (max-width: 768px) {
   .person > div img {
@@ -2939,7 +2941,7 @@ section {
 }
 .button span {
   color: white;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
 }
 @media only screen and (max-width: 768px) {
@@ -2956,7 +2958,7 @@ section {
   color: white;
   font-weight: bold;
   font-size: 18px;
-  padding: 15px;
+  padding: 20px 15px;
   border-radius: 10px;
   position: relative;
   position: absolute;
@@ -2967,10 +2969,13 @@ section {
   right: -9999px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  border: 2px solid white;
+  -webkit-filter: drop-shadow(5px 5px 0 rgba(0, 0, 0, 0.05));
+  filter: drop-shadow(5px 5px 0 rgba(0, 0, 0, 0.05));
 }
 .facebook-button > div {
   position: absolute;
-  left: 15px;
+  left: 18px;
   top: 50%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -2982,6 +2987,8 @@ section {
 }
 .facebook-button span {
   padding: 0 !important;
+  font-size: 16px !important;
+  margin-left: 19px;
 }
 .facebook {
   height: 60px;
@@ -3329,7 +3336,7 @@ section {
   max-width: none;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  height: 455px;
+  height: 450px;
   -webkit-transition-property: width, height;
   transition-property: width, height;
   -webkit-transition-delay: 0s, 0.5s;
@@ -3352,7 +3359,7 @@ section {
   -webkit-transition-delay: 1s;
   transition-delay: 1s;
   opacity: 1;
-  height: 140px;
+  height: 130px;
 }
 @media only screen and (max-width: 768px) {
   .screen-2 .chat {
@@ -3399,7 +3406,7 @@ section {
   max-width: none;
   -webkit-transition: 0.6s;
   transition: 0.6s;
-  height: 455px;
+  height: 440px;
   -webkit-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
   -webkit-backface-visibility: hidden;
@@ -3427,7 +3434,7 @@ section {
   transform: rotateY(0deg);
 }
 .screen-3 .facebook-button, .screen-4 .facebook-button {
-  right: -50px;
+  right: -35px;
   -webkit-transition-delay: 0.5s;
   transition-delay: 0.5s;
 }
