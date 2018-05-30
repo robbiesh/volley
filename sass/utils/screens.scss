@@ -61,6 +61,12 @@
       height: 450px;
       transition-property: width, height;
       transition-delay: 0s, 0.5s;
+      border-radius: 10px;
+
+      > img {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
 
       .price {
         svg {
@@ -159,11 +165,12 @@
     opacity: 1;
     width: 250px;
     max-width: none;
-    transition: 0.6s;
+    transition: all 0.6s ease-in-out;
     height: 440px;
 
     transform: rotateY(-180deg);
     backface-visibility: hidden;
+    transform-style: preserve-3d;
     // transform-style: preserve-3d;
 
     .price {
@@ -179,7 +186,7 @@
   .nico {
     opacity: 1;
     max-width: none;
-    transition: 0.6s;
+    transition: all 0.6s ease-in-out;
 
     backface-visibility: hidden;
     transform-style: preserve-3d;

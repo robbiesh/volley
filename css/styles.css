@@ -2371,6 +2371,7 @@ section {
 .menu a {
   color: white;
   text-decoration: none;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 .menu .nav-pointer {
   z-index: 5;
@@ -2379,18 +2380,7 @@ section {
   left: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-}
-.menu .nav-pointer:before {
-  top: 0;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-  border-color: rgba(255, 255, 255, 0);
-  border-top-color: #00DCC7;
-  border-width: 100px;
+  width: 200px;
 }
 @media only screen and (max-width: 768px) {
   .menu {
@@ -2609,6 +2599,8 @@ section {
 }
 .phone {
   position: relative;
+  -webkit-perspective: 600;
+  perspective: 600;
 }
 .phone > img {
   max-width: 305px;
@@ -2622,20 +2614,6 @@ section {
   -webkit-box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.3);
   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.3);
 }
-.thumbnail-small {
-  width: 175px;
-  background: white;
-}
-@media only screen and (min-width: 769px) and (max-width: 1200px) {
-  .thumbnail-small {
-    width: 150px;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .thumbnail-small {
-    width: 110px;
-  }
-}
 .thumbnail {
   position: absolute;
   text-align: left;
@@ -2648,6 +2626,25 @@ section {
   display: block;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+}
+.thumbnail-small {
+  width: 175px;
+  background: white;
+  border-radius: 5px;
+}
+.thumbnail-small > img {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+  .thumbnail-small {
+    width: 150px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .thumbnail-small {
+    width: 110px;
+  }
 }
 .donuts {
   top: -25px;
@@ -2667,7 +2664,7 @@ section {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   opacity: 0;
-  height: 243px;
+  height: 235px;
 }
 @media only screen and (max-width: 768px) {
   .giants {
@@ -2696,8 +2693,8 @@ section {
   opacity: 0;
   height: 450px;
   width: 250px;
-  -webkit-transform: rotateY(-180deg);
-  transform: rotateY(-180deg);
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 @media only screen and (max-width: 768px) {
   .nico {
@@ -2709,7 +2706,7 @@ section {
 }
 .caption {
   background-color: white;
-  padding: 15px;
+  padding: 12px;
   color: #323134;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -2720,14 +2717,9 @@ section {
   display: block;
 }
 .caption span:first-of-type {
-  font-weight: bold;
-  font-size: 12px;
+  font-weight: 600;
+  font-size: 14px;
   padding-bottom: 5px;
-}
-@media only screen and (max-width: 768px) {
-  .caption span:first-of-type {
-    font-size: 14px;
-  }
 }
 .caption span:last-of-type {
   font-size: 12px;
@@ -3341,6 +3333,11 @@ section {
   transition-property: width, height;
   -webkit-transition-delay: 0s, 0.5s;
   transition-delay: 0s, 0.5s;
+  border-radius: 10px;
+}
+.screen-2 .giants > img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 .screen-2 .giants .price svg {
   width: 80px;
@@ -3404,13 +3401,15 @@ section {
   opacity: 1;
   width: 250px;
   max-width: none;
-  -webkit-transition: 0.6s;
-  transition: 0.6s;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
   height: 440px;
   -webkit-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 .screen-3 .giants .price, .screen-4 .giants .price {
   display: none;
@@ -3424,8 +3423,8 @@ section {
 .screen-3 .nico, .screen-4 .nico {
   opacity: 1;
   max-width: none;
-  -webkit-transition: 0.6s;
-  transition: 0.6s;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-transform-style: preserve-3d;

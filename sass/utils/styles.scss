@@ -152,6 +152,7 @@ section {
   a {
     color: white;
     text-decoration: none;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.50);
   }
 
   .nav-pointer {
@@ -160,21 +161,24 @@ section {
     top: 0;
     left: 0;
     transition: all 0.3s;
+    width: 200px;
     // opacity: 0;
 
-    &:before {
-      top: 0;
-    	border: solid transparent;
-    	content: " ";
-    	height: 0;
-    	width: 0;
-    	position: absolute;
-    	pointer-events: none;
-    	border-color: rgba(255, 255, 255, 0);
-    	border-top-color: $pink;
-    	border-width: 100px;
-    	// margin-left: -100px;
-    }
+    
+
+    // &:before {
+    //   top: 0;
+    // 	border: solid transparent;
+    // 	content: " ";
+    // 	height: 0;
+    // 	width: 0;
+    // 	position: absolute;
+    // 	pointer-events: none;
+    // 	border-color: rgba(255, 255, 255, 0);
+    // 	border-top-color: $pink;
+    // 	border-width: 100px;
+    // 	// margin-left: -100px;
+    // }
   }
 
   @include media-query($medium-down) {
@@ -391,6 +395,7 @@ section {
 
 .phone {
     position: relative;
+    perspective: 600;
 
     > img {
       max-width: 305px;
@@ -405,20 +410,6 @@ section {
     }
 }
 
-.thumbnail-small {
-  // max-width: 175px;
-  width: 175px;
-  background: white;
-
-  @include media-query($large) {
-    width: 150px;
-  }
-
-  @include media-query($medium-down) {
-    width: 110px;
-  }
-}
-
 .thumbnail {
     position: absolute;
     text-align: left;
@@ -431,6 +422,26 @@ section {
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
     }
+}
+
+.thumbnail-small {
+  // max-width: 175px;
+  width: 175px;
+  background: white;
+  border-radius: 5px;
+
+  > img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  @include media-query($large) {
+    width: 150px;
+  }
+
+  @include media-query($medium-down) {
+    width: 110px;
+  }
 }
 
 .donuts {
@@ -449,7 +460,8 @@ section {
     top: -15px;
     transition: all 0.3s;
     opacity: 0;
-    height: 243px;
+    height: 235px;
+
 
     @include media-query($medium-down) {
       width: 110px;
@@ -503,7 +515,7 @@ section {
   opacity: 0;
   height: 450px;
   width: 250px;
-  transform: rotateY(-180deg);
+  transform: rotateY(180deg);
 
   @include media-query($medium-down) {
     width: 200px;
@@ -515,7 +527,7 @@ section {
 
 .caption {
     background-color: white;
-    padding: 15px;
+    padding: 12px;
     color: #323134;
     box-sizing: border-box;
     border-bottom-left-radius: 10px;
@@ -525,13 +537,13 @@ section {
         display: block;
 
         &:first-of-type {
-            font-weight: bold;
-            font-size: 12px;
+            font-weight: 600;
+            font-size: 14px;
             padding-bottom: 5px;
 
-            @include media-query($medium-down) {
-              font-size: 14px;
-            }
+            // @include media-query($medium-down) {
+            //   font-size: 14px;
+            // }
         }
 
         &:last-of-type {
