@@ -230,6 +230,10 @@ section {
   padding: 0 35px;
   text-transform: uppercase;
   transition: all 0.3s;
+  text-decoration: none;
+  color: white;
+  flex-direction: column;
+  justify-content: center;
 
   &:hover {
     opacity: 0.8;
