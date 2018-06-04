@@ -2272,11 +2272,11 @@ img {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
 }
 @media only screen and (max-width: 1200px) {
   .container {
-    padding-top: 100px;
+    padding-top: 90px;
   }
 }
 .container--flex {
