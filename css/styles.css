@@ -2518,18 +2518,14 @@ section {
 @media only screen and (max-width: 768px) {
   .text {
     position: relative;
-    height: 200px;
+    z-index: 10;
+    height: 135px;
   }
   .text h2 {
     font-size: 30px;
   }
   .text p {
     font-size: 18px;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .text {
-    height: 135px;
   }
 }
 .text-inner {
