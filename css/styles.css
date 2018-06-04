@@ -2291,7 +2291,7 @@ img {
   align-items: center;
 }
 main {
-  height: 400vh;
+  height: 700vh;
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -2596,16 +2596,16 @@ section {
   box-sizing: border-box;
 }
 #screen1 {
-  top: 0;
-}
-#screen2 {
   top: 100vh;
 }
+#screen2 {
+  top: 300vh;
+}
 #screen3 {
-  top: 200vh;
+  top: 500vh;
 }
 #screen4 {
-  top: 300vh;
+  top: 600vh;
 }
 .trigger {
   height: 1px;
@@ -3513,7 +3513,7 @@ section {
   transition-delay: 0.5s;
 }
 .screen-4 {
-  height: 300vh;
+  height: 600vh;
   position: absolute;
 }
 .screen-4 .container {
