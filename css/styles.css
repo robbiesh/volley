@@ -2582,9 +2582,9 @@ section {
 }
 @media only screen and (max-width: 768px) {
   .image {
-    padding: 50px 30px 30px;
-    -webkit-transform: scale(0.5);
-    transform: scale(0.5);
+    padding: 30px;
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
     -webkit-transform-origin: top;
     transform-origin: top;
   }
@@ -2621,6 +2621,11 @@ section {
 .phone > img {
   max-width: 305px;
 }
+@media only screen and (max-width: 768px) {
+  .phone > img {
+    max-width: 255px;
+  }
+}
 .phone .thumbnail {
   -webkit-filter: drop-shadow(0px 15px 30px rgba(0, 0, 0, 0.3));
   filter: drop-shadow(0px 15px 30px rgba(0, 0, 0, 0.3));
@@ -2652,6 +2657,11 @@ section {
     width: 150px;
   }
 }
+@media only screen and (max-width: 768px) {
+  .thumbnail-small {
+    width: 110px;
+  }
+}
 .donuts {
   top: -25px;
   right: -100px;
@@ -2671,6 +2681,14 @@ section {
   transition: all 0.3s;
   opacity: 0;
   height: 235px;
+}
+@media only screen and (max-width: 768px) {
+  .giants {
+    width: 110px;
+    left: -70px;
+    top: -20px;
+    height: 182px;
+  }
 }
 .sat {
   bottom: -60px;
@@ -2693,6 +2711,14 @@ section {
   width: 250px;
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
+}
+@media only screen and (max-width: 768px) {
+  .nico {
+    width: 200px;
+    left: -70px;
+    top: -20px;
+    height: 380px;
+  }
 }
 .caption {
   background-color: white;
@@ -2930,6 +2956,15 @@ section {
   color: white;
   font-size: 14px;
   font-weight: bold;
+}
+@media only screen and (max-width: 768px) {
+  .button {
+    width: 145px;
+    bottom: 40px;
+  }
+  .button span {
+    font-size: 14px;
+  }
 }
 .facebook-button {
   background-color: #4266B2;
@@ -3374,6 +3409,12 @@ section {
   width: 80px;
   height: 74px;
 }
+@media only screen and (max-width: 768px) {
+  .screen-2 .giants {
+    width: 200px;
+    height: 380px;
+  }
+}
 .screen-2 .giants .caption span:first-of-type {
   font-size: 18px;
 }
@@ -3438,6 +3479,12 @@ section {
 }
 .screen-3 .giants .price, .screen-4 .giants .price {
   display: none;
+}
+@media only screen and (max-width: 768px) {
+  .screen-3 .giants, .screen-4 .giants {
+    width: 200px;
+    height: 365px;
+  }
 }
 .screen-3 .nico, .screen-4 .nico {
   opacity: 1;
