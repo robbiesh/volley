@@ -2695,8 +2695,8 @@ section {
 }
 @media only screen and (max-width: 768px) {
   .sat {
-    bottom: 15px;
-    right: 10px;
+    bottom: 100px;
+    right: -15px;
   }
 }
 .nico {
