@@ -2578,7 +2578,7 @@ section {
 }
 @media only screen and (max-width: 768px) {
   .image {
-    padding: 30px;
+    padding: 60px 30px 30px;
     -webkit-transform: scale(0.8);
     transform: scale(0.8);
     -webkit-transform-origin: top;
