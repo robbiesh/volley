@@ -2615,8 +2615,12 @@ section {
 }
 .phone {
   position: relative;
-  -webkit-perspective: 600;
-  perspective: 600;
+}
+@media only screen and (min-width: 769px) {
+  .phone {
+    -webkit-perspective: 600;
+    perspective: 600;
+  }
 }
 .phone > img {
   max-width: 305px;
@@ -3329,10 +3333,14 @@ section {
 }
 .card-container {
   height: 150px;
-  -webkit-perspective: 600;
-  perspective: 600;
   position: relative;
   width: 150px;
+}
+@media only screen and (min-width: 769px) {
+  .card-container {
+    -webkit-perspective: 600;
+    perspective: 600;
+  }
 }
 .card {
   height: 100%;
