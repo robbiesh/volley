@@ -2959,8 +2959,9 @@ section {
 }
 @media only screen and (max-width: 768px) {
   .button {
-    width: 145px;
-    bottom: 40px;
+    width: 195px;
+    bottom: 45px;
+    padding: 10px;
   }
   .button span {
     font-size: 14px;
